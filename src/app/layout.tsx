@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import { Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import localfont from "next/font/local"
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
 });
+
+const sequel = localfont({
+  src: [{
+    path: "../../public/fonts/Sequel100Black-85.ttf",
+  }],
+  variable: "--font-sequel"
+})
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -27,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} px-6 sm:px-10 bg-[#c0f48c]`}>
+      <body className={`${spaceGrotesk.className} ${sequel.variable} mx-auto max-w-[1440px] 2xl:px-0 md:px-8 px-4 bg-[#c0f48c]`}>
         <Header />
         {children}
       </body>
