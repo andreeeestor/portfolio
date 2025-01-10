@@ -1,5 +1,5 @@
 "use client";
-import { HandWaving, Stack } from "phosphor-react";
+import { HandWaving, Stack } from "@phosphor-icons/react";
 
 interface HeroProps {}
 export default function Hero(props: HeroProps) {

@@ -1,10 +1,10 @@
-"use client"
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Hero from "@/components/sections/Hero";
 import UpButton from "@/components/UpButton";
 import FlowerShape from "@/components/icons/FlowerShape";
 import ThunderShape from "@/components/icons/ThunderShape";
 import Image from "next/image";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <main className="">
         <UpButton />
-        <section className="w-full bg-black shadow-md rounded-xl p-8">
+        <section className="w-full bg-[#0e0d0d] shadow-md rounded-3xl p-8 border-2 border-solid border-[#1f1f1f]">
           <h1 className="font-sequel uppercase text-primary text-4xl">
             // sobre mim
           </h1>
@@ -27,18 +27,26 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className="text-white text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nisl
-            vel urna aliquet effic. Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Ea eligendi impedit dolorem laudantium ab
-            similique tenetur placeat sint, maxime quasi perspiciatis eveniet
-            esse error corrupti voluptate! Accusantium provident eos quia? Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Provident soluta
-            veritatis quod vel a ut obcaecati cupiditate. Aliquid voluptates,
-            accusamus minus totam ab consequatur amet? Explicabo aliquam iusto
-            quaerat dolores.
-          </p>
+          <div className="grid place-items-center md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 md:gap-x-8">
+            <Image
+              src={"/images/apagaissoaq.jpg"}
+              alt="Minha Foto"
+              className="w-full h-72 bg-white rounded-3xl"
+              width={100}
+              height={288}
+            />
+            <p className="text-white text-lg leading-8">
+              Olá, sou o André, tenho 18 anos e me formei no ensino médio
+              técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e
+              Mobile, atualmente estou no 3º período no curso superior de
+              Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG.
+              Desenvolvo sites com interfaces modernas e de alta qualidade, concentrado em
+              performance, animações, responsividade e SEO.
+            </p>
+          </div>
         </section>
+
+        <Projects />
       </main>
     </>
   );
