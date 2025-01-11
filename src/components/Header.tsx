@@ -14,13 +14,13 @@ export default function Header(props: HeaderProps) {
             </li>
             <li className="opacity-40 font-bold">//</li>
             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-              <span>Skills</span>
+              <span>Projetos</span>
               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
             </li>
             <li className="opacity-40 font-bold">//</li>
             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-              <span>Projetos</span>
+              <span>Skills</span>
               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
             </li>

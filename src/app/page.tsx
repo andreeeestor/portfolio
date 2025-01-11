@@ -5,6 +5,8 @@ import FlowerShape from "@/components/icons/FlowerShape";
 import ThunderShape from "@/components/icons/ThunderShape";
 import Image from "next/image";
 import Projects from "@/components/sections/Projects";
+import { RevealLinks } from "@/components/RevealLinks";
+import SocialLinks from "@/components/sections/SocialLinks";
 
 export default function Home() {
   return (
@@ -12,9 +14,9 @@ export default function Home() {
       <Hero />
       <main className="">
         <UpButton />
-        <section className="w-full bg-[#0e0d0d] shadow-md rounded-3xl p-8 border-2 border-solid border-[#1f1f1f]">
+        <section className="w-full bg-black shadow-md rounded-3xl p-8 border-2 border-solid border-slate-700">
           <h1 className="font-sequel uppercase text-primary text-4xl">
-            // sobre mim
+            {"// sobre mim"}
           </h1>
           <div className="relative">
             <div className="w-full h-[2px] bg-[#c0f48c] my-8">
@@ -31,9 +33,9 @@ export default function Home() {
             <Image
               src={"/images/apagaissoaq.jpg"}
               alt="Minha Foto"
-              className="w-full h-72 bg-white rounded-3xl"
+              className="w-full h-96 bg-white rounded-3xl"
               width={100}
-              height={288}
+              height={100}
             />
             <p className="text-white text-lg leading-8">
               Olá, sou o André, tenho 18 anos e me formei no ensino médio
@@ -44,8 +46,9 @@ export default function Home() {
               performance, animações, responsividade e SEO.
             </p>
           </div>
+          {/* <RevealLinks /> */}
         </section>
-
+        <SocialLinks />
         <Projects />
       </main>
     </>

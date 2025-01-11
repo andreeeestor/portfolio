@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --primary-color: #c0f48c;
-        --secondary-color: #000000;
-        --terciary-color: #ACAAFF
-    }
+  :root {
+    --primary-color: #c0f48c;
+    --secondary-color: #000000;
+    --terciary-color: #acaaff;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #acaaff;
+  border-radius: 4px;
 }
