@@ -25,7 +25,7 @@ export default function UpButton() {
   return (
     <>
       {backToTopButton && (
-        <button onClick={scrollUp} className="fixed bottom-0 right-0 bg-primary border-2 border-black p-3 rounded-full m-4 z-50 shadow-2xl cursor-pointer hover:mb-5 hover:opacity-95 transition-all">
+        <button onClick={scrollUp} className="fixed bottom-0 right-0 bg-primary border-2 border-black p-3 rounded-full m-4 z-50 shadow-2xl cursor-pointer hover:mb-5 hover:opacity-95 transition-all md:block hidden">
           <CaretUp size={28} color="black" weight="bold" />
         </button>
       )}
