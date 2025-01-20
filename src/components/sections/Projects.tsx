@@ -8,7 +8,7 @@ export default function Projects(props: ProjectsProps) {
     <>
       <div className="mt-12 w-full h-2 bg-black" />
       <section>
-        <h1 className="-translate-y-[5.4rem] text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
+        <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
           {/* <h1 className="absolute -top-[5.785rem] text-[11.1rem] uppercase font-sequel tracking-wide"> */}
           {"//Projetos"}
         </h1>

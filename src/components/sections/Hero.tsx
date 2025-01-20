@@ -1,16 +1,19 @@
 "use client";
 import { HandWaving, Stack } from "@phosphor-icons/react";
+import DecryptedText from "../DecryptedText";
 
 interface HeroProps {}
 export default function Hero(props: HeroProps) {
   return (
     <section className="w-full h-screen flex flex-col justify-normal md:justify-evenly">
-        <section className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 place-items-center">
+        <section className="grid grid-cols-1 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 place-items-center">
           <HandWaving size={192} />
           <h1 className="text-8xl font-medium uppercase flex flex-col">
             <span className="text-6xl">oi! eu sou o</span>
-            <span className="font-sequel">André </span>
-            <span className="font-sequel">Nestor.</span>
+            {/* <span className="font-sequel">André </span>
+            <span className="font-sequel">Nestor.</span> */}
+            <DecryptedText text="André " maxIterations={6} animateOn="view"  speed={500} revealDirection="end" />
+            <DecryptedText text="Nestor." maxIterations={7} animateOn="view"  speed={500} revealDirection="end" />
             <span className="text-3xl pt-7">
               Desenvolvedor 
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text font-bold"> Front-End</span>

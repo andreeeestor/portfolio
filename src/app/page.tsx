@@ -7,6 +7,7 @@ import Image from "next/image";
 import Projects from "@/components/sections/Projects";
 import { RevealLinks } from "@/components/RevealLinks";
 import SocialLinks from "@/components/sections/SocialLinks";
+import Contact from "@/components/sections/ContactForm";
 
 export default function Home() {
   return (
@@ -46,10 +47,10 @@ export default function Home() {
               performance, animações, responsividade e SEO.
             </p>
           </div>
-          {/* <RevealLinks /> */}
         </section>
         <SocialLinks />
         <Projects />
+        <Contact />
       </main>
     </>
   );

@@ -19,3 +19,7 @@
   background: #acaaff;
   border-radius: 4px;
 }
+
+.modalIcon {
+  @apply text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24
+}

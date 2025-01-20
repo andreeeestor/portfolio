@@ -180,7 +180,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full py-6 bg-[#c0f48c] border-b-2 border-black sticky top-0 z-50">
+    <header className="w-full py-6 bg-[#c0f48c] border-b-2 border-black border-x-2 border-x-[#c0f48c] sticky top-0 z-50">
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <ul className="hidden lg:flex items-center gap-6 uppercase font-medium">
           <li className="relative group cursor-pointer">
@@ -221,7 +221,7 @@ export default function Header() {
           <ResumeButton />
         </div>
 
-        <div className="lg:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center justify-between w-full gap-4">
           <LanguageToggle />
           <AnimatedHamburgerButton active={menuOpen} setActive={setMenuOpen} />
         </div>
@@ -233,7 +233,7 @@ export default function Header() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="lg:hidden absolute top-20 right-4 bg-white rounded-lg shadow-lg p-4 min-w-[200px]"
+              className="lg:hidden absolute top-24 right-4 bg-white rounded-lg shadow-lg p-4 min-w-[200px]"
             >
               <ul className="flex flex-col gap-2">
                 <li>
