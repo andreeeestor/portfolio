@@ -12,8 +12,8 @@ export default function Contact(props: ContactProps) {
 
                 <label>Email:</label>
                 <input className="bg-transparent shadow-inner text-xs outline-none rounded-lg p-2 border-b-2 border-slate-900" type="email" name="" id="" required />
-
-                <input className="bg-transparent " type="text" name="" id="" />
+    <label></label>
+                <textarea className="bg-transparent shadow-inner text-xs outline-none rounded-lg p-2 border-b-2 border-slate-900" />
                 <button className="text-white bg-black w-full py-2 tracking-wider transition-all hover:tracking-widest rounded-lg" type="submit">Enviar</button>
             </form>
         </div>

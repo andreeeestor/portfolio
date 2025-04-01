@@ -64,7 +64,7 @@ export default function ProjectsCards({
           </div>
         )}
       </motion.article>
-      <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} title="Bon Voyage" />
     </>
   );
 }

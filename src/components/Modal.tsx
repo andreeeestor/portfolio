@@ -1,13 +1,16 @@
 import { Code } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
+import ThunderShape from "./icons/ThunderShape";
 
 const SpringModal = ({
     isOpen,
     setIsOpen,
+    title
   }: {
     isOpen: boolean;
     setIsOpen: Dispatch<SetStateAction<boolean>>;
+    title: string
   }) => {
     return (
       <AnimatePresence>
@@ -33,8 +36,9 @@ const SpringModal = ({
                   {Icon}
                 </div> */}
                 <h3 className="text-3xl font-bold text-center mb-2">
-                  One more thing!
+                  {title}
                 </h3>
+                
                 <p className="text-center mb-6">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
                   aperiam vitae, sapiente ducimus eveniet in velit.
@@ -44,13 +48,13 @@ const SpringModal = ({
                     onClick={() => setIsOpen(false)}
                     className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded"
                   >
-                    Nah, go back
+                    Fechar
                   </button>
                   <button
                     onClick={() => setIsOpen(false)}
                     className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
                   >
-                    Understood!
+                    Abrir no GitHub
                   </button>
                 </div>
               </div>

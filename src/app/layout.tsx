@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${spaceGrotesk.className} ${sequel.variable} mx-auto max-w-[1440px] 2xl:px-0 md:px-8 px-4 bg-[#c0f48c]`}>
+      <body className={`${spaceGrotesk.className} ${sequel.variable} mx-auto max-w-[1440px] 2xl:px-0 md:px-8 px-4 bg-[#c0f48c] select-none`}>
         <Header />
         {children}
       </body>
