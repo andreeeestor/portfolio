@@ -7,12 +7,15 @@ export default function Projects(props: ProjectsProps) {
   return (
     <>
       <div className="mt-12 w-full h-2 bg-black" />
-      <section>
-        <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
+      {/* <section>
+        <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text"> */}
+
+      <section className="relative">
+        <h1 className="absolute uppercase -top-[52px] text-[9.4rem] font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
           {/* <h1 className="absolute -top-[5.785rem] text-[11.1rem] uppercase font-sequel tracking-wide"> */}
           {"//Projetos"}
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-52">
           <ProjectsCards
             title="Projeto A"
             description="Uma breve descrição do Projeto A."

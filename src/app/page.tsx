@@ -39,11 +39,11 @@ export default function Home() {
               height={100}
             />
             <p className="text-white text-lg leading-8">
-              Olá, sou o André, tenho 18 anos e me formei no ensino médio
+              Olá, sou o André, tenho 19 anos e me formei no ensino médio
               técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e
               Mobile, atualmente estou no 3º período no curso superior de
               Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG.
-              Desenvolvo sites com interfaces modernas e de alta qualidade, concentrado em
+              Desenvolvo sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em
               performance, animações, responsividade e SEO.
             </p>
           </div>

@@ -22,11 +22,11 @@ export const RevealLinks: FC = () => {
         <ArrowCircleRight className=" text-4xl sm:text-7xl md:text-8xl" />{" "}
         <FlipLink href="mailto:andrenestor0503@gmail.com">Gmail</FlipLink>
       </div>
-      <hr className="my-12 border-black" />
+      {/* <hr className="my-12 border-black" />
       <div className="flex items-center gap-x-6">
         <ArrowCircleRight className=" text-4xl sm:text-7xl md:text-8xl" />{" "}
         <FlipLink href="#">Instagram</FlipLink>
-      </div>
+      </div> */}
     </section>
   );
 };

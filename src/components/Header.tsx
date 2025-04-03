@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import ResumeButton from "./ResumeButton";
@@ -192,16 +192,16 @@ export default function Header() {
           </li>
           <li className="opacity-40 font-bold">{"//"}</li>
           <li className="relative group cursor-pointer">
-            <a href="#projects" className="hover:opacity-100 transition-all">
-              Projetos
+            <a href="#skills" className="hover:opacity-100 transition-all">
+              Skills
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
           </li>
           <li className="opacity-40 font-bold">{"//"}</li>
           <li className="relative group cursor-pointer">
-            <a href="#skills" className="hover:opacity-100 transition-all">
-              Skills
+            <a href="#projects" className="hover:opacity-100 transition-all">
+              Projetos
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />

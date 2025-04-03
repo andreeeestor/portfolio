@@ -17,11 +17,11 @@ export default function ThunderShape(props: ThunderShapeProps) {
       className={props.className}
     >
       {" "}
-      <g clip-path="url(#clip0_238_1296)">
+      <g clipPath="url(#clip0_238_1296)">
         {" "}
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M100 0H0L100 100H0L100 200H200L100 100H200L100 0Z"
           fill="url(#paint0_linear_238_1296)"
         />{" "}
@@ -37,8 +37,8 @@ export default function ThunderShape(props: ThunderShapeProps) {
           gradientUnits="userSpaceOnUse"
         >
           {" "}
-          <stop stop-color={props.color1} />{" "}
-          <stop offset="1" stop-color={props.color2} />{" "}
+          <stop stopColor={props.color1} />{" "}
+          <stop offset="1" stopColor={props.color2} />{" "}
         </linearGradient>{" "}
         <clipPath id="clip0_238_1296">
           {" "}

@@ -3,6 +3,7 @@ import { Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import localfont from "next/font/local"
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.className} ${sequel.variable} mx-auto max-w-[1440px] 2xl:px-0 md:px-8 px-4 bg-[#c0f48c] select-none`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
