@@ -2,6 +2,13 @@
 import { useEffect } from "react";
 
 const BubbleText = () => {
+  const phoneNumber = "+55 31 99820-2542"; 
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(phoneNumber)
+      .then(() => alert("Número copiado!"))
+      .catch(err => console.error("Erro ao copiar:", err));
+  };
     useEffect(() => {
       const spans = document.querySelectorAll(
         ".hover-text span"
@@ -46,8 +53,8 @@ const BubbleText = () => {
     }, []);
   
     return (
-      <h2 className="hover-text text-center text-5xl font-thin text-indigo-300">
-        <Text>+55 (31) 99820-2542</Text>
+      <h2 title="Clique para copiar o número" onClick={copyToClipboard} className="cursor-pointer hover-text text-center text-5xl font-thin text-indigo-300">
+        <Text>{phoneNumber}</Text>
       </h2>
     );
   };

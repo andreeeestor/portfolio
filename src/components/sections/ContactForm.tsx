@@ -1,23 +1,54 @@
+import { PhoneCall } from "@phosphor-icons/react/dist/ssr";
 import BubbleText from "../BubbleText";
+import ScrollVelocity from "../ScrollVelocity";
+import StarBorder from "../StarBorder";
 
-interface ContactProps {}
-export default function Contact(props: ContactProps) {
+export default function Contact() {
   return (
-    <section className="w-full bg-black shadow-md rounded-3xl p-8 border-2 border-solid border-slate-700 mt-24">
-        <div className="flex items-center justify-between">
-            <h1 className="text-white text-4xl font-sequel uppercase">
-                Contate-me para<br/>mais informações
-            </h1>
-            <form className="bg-[#c0f48c] rounded-lg -translate-y-16 flex flex-col p-4 border-2 border-slate-700">
-
-                <label>Email:</label>
-                <input className="bg-transparent shadow-inner text-xs outline-none rounded-lg p-2 border-b-2 border-slate-900" type="email" name="" id="" required />
-    <label></label>
-                <textarea className="bg-transparent shadow-inner text-xs outline-none rounded-lg p-2 border-b-2 border-slate-900" />
-                <button className="text-white bg-black w-full py-2 tracking-wider transition-all hover:tracking-widest rounded-lg" type="submit">Enviar</button>
-            </form>
+    <StarBorder className="w-full mt-24" color="cyan" speed="5s">
+      <ScrollVelocity
+        texts={["Entre em Contato // ", "Entre em Contato // "]}
+        velocity={60}
+        className="font-sequel uppercase text-gray-200 pt-4"
+      />
+      <form className="backdrop-blur-md bg-white/5 border border-white/20 z-50 rounded-lg flex flex-col p-6 my-8 shadow-lg mx-6">
+        <div className="flex flex-col md:flex-row items-center">
+          <input
+            title="Nome:"
+            className="w-full bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
+            type="text"
+            placeholder="Nome:"
+            required
+          />
+          <div className="hidden md:w-12 md:block" />
+          <input
+            title="Email:"
+            className="w-full bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
+            type="email"
+            placeholder="Email:"
+            required
+          />
         </div>
+        <textarea
+          className="bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 resize-none text-sm rounded-lg p-3 mb-4 outline-none"
+          placeholder="Digite sua mensagem..."
+          rows={10}
+        />
+
+        <button
+          className="text-black bg-white w-full py-4 tracking-wider transition-all hover:tracking-widest rounded-3xl hover:opacity-90"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+
+      <h6 className="text-indigo-300 font-semibold tracking-widest pb-4">OU</h6>
+      <div className="flex items-center justify-center gap-x-4 text-5xl text-indigo-300 pb-8">
+        <PhoneCall />
+        <span>{`//`}</span>
         <BubbleText />
-    </section>
+      </div>
+    </StarBorder>
   );
 }
