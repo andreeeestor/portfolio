@@ -35,7 +35,7 @@ const DURATION = 0.25;
 const STAGGER = 0.025;
 
 interface FlipLinkProps {
-  children: React.ReactNode;
+  children: string;
   href: string;
 }
 
