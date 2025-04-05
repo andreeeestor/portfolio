@@ -21,7 +21,7 @@ export default function Hero(props: HeroProps) {
           </h1>
         </section>
       <section className="animate-bounce flex justify-center items-center py-20 md:py-0">
-        <div className="cursor-pointer text-5xl -rotate-90 pb-3 pt-2 px-3 rounded-full shadow-md bg-black text-[#ACAAFF]">
+        <div className="cursor-pointer text-5xl -rotate-90 pb-[5px] flex justify-center items-center rounded-full size-16 shadow-md bg-black text-[#ACAAFF]">
           ⇜
         </div>
       </section>

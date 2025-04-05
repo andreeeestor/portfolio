@@ -11,7 +11,7 @@ export default function Contact() {
         velocity={60}
         className="font-sequel uppercase text-gray-200 pt-4"
       />
-      <form className="backdrop-blur-md bg-white/5 border border-white/20 z-50 rounded-lg flex flex-col p-6 my-8 shadow-lg mx-6">
+      <form className="backdrop-blur-md bg-white/5 border border-white/20 z-50 rounded-xl flex flex-col p-6 my-8 shadow-lg mx-6">
         <div className="flex flex-col md:flex-row items-center">
           <input
             title="Nome:"

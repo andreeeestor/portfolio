@@ -8,6 +8,7 @@ import Projects from "@/components/sections/Projects";
 import { RevealLinks } from "@/components/RevealLinks";
 import SocialLinks from "@/components/sections/SocialLinks";
 import Contact from "@/components/sections/ContactForm";
+import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
           </div>
         </section>
         <SocialLinks />
+        <Skills />
         <Projects />
         <Contact />
       </main>

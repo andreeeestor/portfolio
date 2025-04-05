@@ -17,9 +17,9 @@ export default function Projects(props: ProjectsProps) {
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-52">
           <ProjectsCards
-            title="Projeto A"
+            title="CoverSpot"
             description="Uma breve descrição do Projeto A."
-            imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
+            imageUrl="../../../images/image.png"
           />
           <ProjectsCards
             withArrow
@@ -33,9 +33,9 @@ export default function Projects(props: ProjectsProps) {
             imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
           />
           <ProjectsCards
-            title="Projeto C"
+            title="NearbyApp"
             description="Uma breve descrição do Projeto C."
-            imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
+            imageUrl="../../../images/business-people-using-maps-phones.jpg"
           />
           <article className="w-96 space-y-8">
             <div className="w-full flex justify-center">
