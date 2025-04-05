@@ -2,11 +2,13 @@
 import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
 import ProjectsCards from "../ProjectsCards";
 
-interface ProjectsProps {}
+interface ProjectsProps {
+  id: string
+}
 export default function Projects(props: ProjectsProps) {
   return (
     <>
-      <div className="mt-12 w-full h-2 bg-black" />
+      <div id={props.id} className="mt-12 w-full h-2 bg-black" />
       {/* <section>
         <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text"> */}
 
@@ -18,23 +20,23 @@ export default function Projects(props: ProjectsProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-52">
           <ProjectsCards
             title="CoverSpot"
-            description="Uma breve descrição do Projeto A."
+            description="Descrição bacana. Feito em "
             imageUrl="../../../images/image.png"
           />
           <ProjectsCards
             withArrow
             title="Bon Voyage"
-            description="Descrição com a seta decorativa."
+            description="Descrição bacana. Feito em "
             imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
           />
           <ProjectsCards
-            title="Projeto C"
-            description="Uma breve descrição do Projeto C."
+            title="Projetin"
+            description="Descrição bacana. Feito em "
             imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
           />
           <ProjectsCards
             title="NearbyApp"
-            description="Uma breve descrição do Projeto C."
+            description="Descrição bacana. Feito em "
             imageUrl="../../../images/business-people-using-maps-phones.jpg"
           />
           <article className="w-96 space-y-8">
@@ -58,8 +60,8 @@ export default function Projects(props: ProjectsProps) {
             </a>
           </article>
           <ProjectsCards
-            title="Projeto C"
-            description="Uma breve descrição do Projeto C."
+            title="Projetin"
+            description="Descrição bacana. Feito em "
             imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
           />
         </div>

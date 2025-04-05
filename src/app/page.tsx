@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <main className="">
         <UpButton />
-        <section className="w-full bg-black shadow-md rounded-3xl p-8 border-2 border-solid border-slate-700">
+        <section id="about" className="w-full bg-black shadow-md rounded-3xl p-8 border-2 border-solid border-slate-700">
           <h1 className="font-sequel uppercase text-primary text-4xl">
             {"// sobre mim"}
           </h1>
@@ -50,9 +50,9 @@ export default function Home() {
           </div>
         </section>
         <SocialLinks />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Skills id={"skills"} />
+        <Projects id={"projects"} />
+        <Contact id={"contact"} />
       </main>
     </>
   );

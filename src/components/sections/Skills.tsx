@@ -2,26 +2,28 @@ import Folder from "../Folder";
 import ThunderShape from "../icons/ThunderShape";
 import StarBorder from "../StarBorder";
 
-interface SkillsProps {}
+interface SkillsProps {
+  id: string
+}
 export default function Skills(props: SkillsProps) {
   return (
-    <StarBorder className="w-full">
+    <StarBorder id={props.id} className="w-full">
       <div className="p-8 pb-0">
-      <h1 className="font-sequel text-end uppercase text-primary text-4xl">
-            {"skills //"}
-          </h1>
-          <div className="relative">
-            <div className="w-full h-[2px] bg-[#c0f48c] my-8">
-              <ThunderShape
-                className="absolute right-[48.8%] top-0 -translate-y-[14px] shadow-lg"
-                width="30"
-                height="30"
-                color1="#FFFFFF"
-                color2="#FFFFFF"
-              />
-            </div>
+        <h1 className="font-sequel text-end uppercase text-primary text-4xl">
+          {"skills //"}
+        </h1>
+        <div className="relative">
+          <div className="w-full h-[2px] bg-[#c0f48c] my-8">
+            <ThunderShape
+              className="absolute right-[48.8%] top-0 -translate-y-[14px] shadow-lg"
+              width="30"
+              height="30"
+              color1="#FFFFFF"
+              color2="#FFFFFF"
+            />
           </div>
-          </div>
+        </div>
+      </div>
       <div className="grid grid-rows-2 grid-cols-1 items-center place-items-center flex-wrap my-36 gap-y-44">
         <div className="flex items-center justify-around w-full">
           <Folder
@@ -99,6 +101,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
+            description="Ambiente de execução JavaScript no servidor. Utilizo para criar APIs escaláveis e performáticas, com suporte à programação assíncrona."
           />
           <Folder
             icon={
@@ -122,12 +125,60 @@ export default function Skills(props: SkillsProps) {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <title>Prisma</title>
+                <path d="M21.8068 18.2848L13.5528.7565c-.207-.4382-.639-.7273-1.1286-.7541-.5023-.0293-.9523.213-1.2062.6253L2.266 15.1271c-.2773.4518-.2718 1.0091.0158 1.4555l4.3759 6.7786c.2608.4046.7127.6388 1.1823.6388.1332 0 .267-.0188.3987-.0577l12.7019-3.7568c.3891-.1151.7072-.3904.8737-.7553s.1633-.7828-.0075-1.1454zm-1.8481.7519L9.1814 22.2242c-.3292.0975-.6448-.1873-.5756-.5194l3.8501-18.4386c.072-.3448.5486-.3996.699-.0803l7.1288 15.138c.1344.2856-.019.6224-.325.7128z" />
+              </svg>
+            }
+            size={2}
+            className="custom-folder"
+            description="ORM moderno para Node.js e TypeScript que facilita o acesso ao banco de dados com segurança de tipos e auto-complete. Uso para modelar e consultar dados com eficiência."
+          />
+          <Folder
+            icon={
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Express</title>
+                <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z" />
+              </svg>
+            }
+            size={2}
+            className="custom-folder"
+            description="Framework minimalista para Node.js usado na criação de APIs e servidores. Facilita o roteamento e o gerenciamento de requisições HTTP."
+          />
+        </div>
+        <div className="flex items-center justify-around w-full">
+          <Folder
+            icon={
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <title>Kotlin</title>
                 <path d="M24 24H0V0h24L12 12Z" />
               </svg>
             }
             size={2}
             className="custom-folder"
+            description="Linguagem oficial para Android, moderna, concisa e segura. Utilizo no desenvolvimento de apps móveis nativos com arquitetura limpa e recursos avançados."
+          />
+          <Folder
+            icon={
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>UIkit</title>
+                <path d="M17.697 3.292l-4.109 2.489 4.738 2.696v7.077l-6.365 3.538-6.258-3.538v-5.485L1.596 7.956V18l10.219 6 10.589-6V6.002l-4.707-2.71zm-1.904-.989L11.813 0 7.665 2.568l4.032 2.218 4.096-2.483z" />
+              </svg>
+            }
+            size={2}
+            className="custom-folder"
+            description="Framework tradicional para desenvolvimento iOS. Uso para criar interfaces com controle mais preciso, ideal para projetos que exigem compatibilidade com versões antigas do iOS."
           />
           <Folder
             icon={
@@ -142,6 +193,22 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
+            description="Swift é uma linguagem moderna e segura para iOS. SwiftUI é um framework declarativo que uso para construir interfaces fluidas, rápidas e responsivas para apps Apple."
+          />
+          <Folder
+            icon={
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Git</title>
+                <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+              </svg>
+            }
+            size={2}
+            className="custom-folder"
+            description="Sistema de controle de versão distribuído. Uso para gerenciar o histórico do código, colaborar em equipe e manter o projeto versionado com segurança."
           />
         </div>
       </div>

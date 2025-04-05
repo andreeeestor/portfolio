@@ -3,9 +3,13 @@ import BubbleText from "../BubbleText";
 import ScrollVelocity from "../ScrollVelocity";
 import StarBorder from "../StarBorder";
 
-export default function Contact() {
+interface ContactProps {
+  id: string
+}
+
+export default function Contact(props: ContactProps) {
   return (
-    <StarBorder className="w-full mt-24" color="cyan" speed="5s">
+    <StarBorder id={props.id} className="w-full mt-24" color="cyan" speed="5s">
       <ScrollVelocity
         texts={["Entre em Contato // ", "Entre em Contato // "]}
         velocity={60}

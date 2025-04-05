@@ -2,6 +2,7 @@ import React from "react";
 
 type StarBorderProps<T extends React.ElementType> =
   React.ComponentPropsWithoutRef<T> & {
+    id: string
     as?: T;
     className?: string;
     children?: React.ReactNode;
@@ -10,6 +11,7 @@ type StarBorderProps<T extends React.ElementType> =
   }
 
 const StarBorder = <T extends React.ElementType>({
+  id,
   as,
   className = "",
   color = "white",
@@ -20,7 +22,7 @@ const StarBorder = <T extends React.ElementType>({
   const Component = as || "section";
 
   return (
-    <Component className={`relative inline-block py-[1px] overflow-hidden rounded-[20px] ${className}`} {...rest}>
+    <Component id={id} className={`relative inline-block py-[1px] overflow-hidden rounded-[20px] ${className}`} {...rest}>
       <div
         className="absolute w-[300%] h-[50%] opacity-70 bottom-[-11px] right-[-250%] rounded-full animate-star-movement-bottom z-0"
         style={{
