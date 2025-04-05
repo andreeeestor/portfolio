@@ -1,8 +1,16 @@
-  "use client";
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import ResumeButton from "./ResumeButton";
 import { CaretDown, Globe } from "@phosphor-icons/react";
+
+type Language = "pt" | "en";
+
+interface LanguageOptionProps {
+  language: Language;
+  label: string;
+  onClick: (language: Language) => void;
+}
 
 const wrapperVariants = {
   open: {
@@ -67,7 +75,7 @@ const HAMBURGER_VARIANTS = {
   },
 };
 
-const LanguageOption = ({ language, label, onClick }) => (
+const LanguageOption = ({ language, label, onClick }: LanguageOptionProps) => (
   <motion.li
     variants={itemVariants}
     className="flex items-center gap-2 w-full p-2 text-sm font-medium whitespace-nowrap rounded-md hover:bg-green-100 text-black hover:text-green-500 transition-colors cursor-pointer"
@@ -137,7 +145,15 @@ const LanguageToggle = () => {
   );
 };
 
-const AnimatedHamburgerButton = ({ active, setActive }) => {
+interface AnimatedHamburgerButtonProps {
+  active: boolean;
+  setActive: (active: boolean) => void;
+}
+
+const AnimatedHamburgerButton = ({
+  active,
+  setActive,
+}: AnimatedHamburgerButtonProps) => {
   return (
     <MotionConfig
       transition={{
@@ -283,79 +299,3 @@ export default function Header() {
     </header>
   );
 }
-// import ResumeButton from "./ResumeButton";
-
-// interface HeaderProps {}
-// export default function Header(props: HeaderProps) {
-//   return (
-//     <>
-//       <header className="w-full py-6 bg-[#c0f48c] border-b-2 border-black sticky top-0 z-50">
-//         <nav className="hidden lg:flex justify-between items-center">
-//           <ul className="flex items-center gap-x-6 uppercase font-medium cursor-default">
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Sobre mim</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"/>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"/>
-//             </li>
-//             <li className="opacity-40 font-bold">{"//"}</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Projetos</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//             <li className="opacity-40 font-bold">{"//"}</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Skills</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//             <li className="opacity-40 font-bold">{"//"}</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Contato</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//           </ul>
-//           <ResumeButton />
-//         </nav>
-//       </header>
-//     </>
-//   );
-// }
-
-// interface HeaderProps {}
-// export default function Header(props: HeaderProps) {
-//   return (
-//     <>
-//       <header className="w-full py-6 bg-[#c0f48c] border-b-2 border-black sticky top-0 z-50">
-//         <nav>
-//           <ul className="flex justify-center items-center gap-x-6 uppercase font-medium cursor-default">
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Sobre mim</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//             <li>//</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Skills</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//             <li>//</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Projetos</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//             <li>//</li>
-//             <li className="relative group cursor-pointer opacity-80 hover:opacity-100 transition-all">
-//               <span>Contato</span>
-//               <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//               <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all"></span>
-//             </li>
-//           </ul>
-//         </nav>
-//       </header>
-//     </>
-//   );
-// }
