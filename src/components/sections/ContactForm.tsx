@@ -4,7 +4,7 @@ import ScrollVelocity from "../ScrollVelocity";
 import StarBorder from "../StarBorder";
 
 interface ContactProps {
-  id: string
+  id: string;
 }
 
 export default function Contact(props: ContactProps) {
@@ -19,7 +19,7 @@ export default function Contact(props: ContactProps) {
         <div className="flex flex-col md:flex-row items-center">
           <input
             title="Nome:"
-            className="w-full bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
+            className="w-full bg-transparent backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
             type="text"
             placeholder="Nome:"
             required
@@ -27,14 +27,14 @@ export default function Contact(props: ContactProps) {
           <div className="hidden md:w-12 md:block" />
           <input
             title="Email:"
-            className="w-full bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
+            className="w-full bg-transparent backdrop-blur-sm border border-white/10 text-white placeholder-white/50 text-sm rounded-xl px-3 py-4 mb-4 outline-none"
             type="email"
             placeholder="Email:"
             required
           />
         </div>
         <textarea
-          className="bg-black/30 backdrop-blur-sm border border-white/10 text-white placeholder-white/50 resize-none text-sm rounded-lg p-3 mb-4 outline-none"
+          className="bg-transparent backdrop-blur-sm border border-white/10 text-white placeholder-white/50 resize-none text-sm rounded-lg p-3 mb-4 outline-none"
           placeholder="Digite sua mensagem..."
           rows={10}
         />
@@ -48,7 +48,7 @@ export default function Contact(props: ContactProps) {
       </form>
 
       <h6 className="text-indigo-300 font-semibold tracking-widest pb-4">OU</h6>
-      <div className="flex items-center justify-center gap-x-4 text-5xl text-indigo-300 pb-8">
+      <div className="flex sm:flex-row flex-col items-center justify-center gap-y-4 sm:gap-x-4 text-3xl sm:text-5xl text-indigo-300 pb-8">
         <PhoneCall />
         <span>{`//`}</span>
         <BubbleText />

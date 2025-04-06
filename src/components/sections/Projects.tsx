@@ -3,7 +3,7 @@ import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
 import ProjectsCards from "../ProjectsCards";
 
 interface ProjectsProps {
-  id: string
+  id: string;
 }
 export default function Projects(props: ProjectsProps) {
   return (
@@ -13,11 +13,11 @@ export default function Projects(props: ProjectsProps) {
         <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text"> */}
 
       <section className="relative">
-        <h1 className="absolute uppercase -top-[52px] text-[9.4rem] font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
+        <h1 className="absolute uppercase -top-[6px] text-4xl lg:text-[9.4rem] font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
           {/* <h1 className="absolute -top-[5.785rem] text-[11.1rem] uppercase font-sequel tracking-wide"> */}
           {"//Projetos"}
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-52">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-24 sm:pt-52">
           <ProjectsCards
             title="CoverSpot"
             description="Descrição bacana. Feito em "
@@ -39,13 +39,13 @@ export default function Projects(props: ProjectsProps) {
             description="Descrição bacana. Feito em "
             imageUrl="../../../images/business-people-using-maps-phones.jpg"
           />
-          <article className="w-96 space-y-8">
+          <article className="w-[335px] sm:w-96 space-y-8">
             <div className="w-full flex justify-center">
               <div className="border-2 border-black rounded-full p-5 shadow-sm">
                 <GithubLogo size={32} weight="duotone" />
               </div>
             </div>
-            <h1 className="text-center font-sequel text-4xl uppercase">
+            <h1 className="text-center font-sequel text-3xl sm:text-4xl uppercase">
               Mais No Meu Repositório
             </h1>
             <a

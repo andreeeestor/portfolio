@@ -45,9 +45,9 @@ const FlipLink: FC<FlipLinkProps> = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      target={href.startsWith("mailto:") ? undefined : "_blank"} 
-      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"} 
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+      className="relative block overflow-hidden whitespace-nowrap text-6xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
       style={{
         lineHeight: 0.75,
       }}

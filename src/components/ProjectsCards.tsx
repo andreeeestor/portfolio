@@ -21,7 +21,7 @@ export default function ProjectsCards({
   return (
     <>
       <motion.article
-        className="w-96 h-[28rem] rounded-2xl relative overflow-visible shadow-lg"
+        className="w-[335px] sm:w-96 h-[28rem] rounded-2xl relative overflow-visible shadow-lg"
         whileHover={{
           scale: 1.05,
           boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",

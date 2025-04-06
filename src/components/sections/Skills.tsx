@@ -3,13 +3,13 @@ import ThunderShape from "../icons/ThunderShape";
 import StarBorder from "../StarBorder";
 
 interface SkillsProps {
-  id: string
+  id: string;
 }
 export default function Skills(props: SkillsProps) {
   return (
     <StarBorder id={props.id} className="w-full">
       <div className="p-8 pb-0">
-        <h1 className="font-sequel text-end uppercase text-primary text-4xl">
+        <h1 className="font-sequel text-center md:text-end uppercase text-primary text-4xl">
           {"skills //"}
         </h1>
         <div className="relative">
@@ -24,8 +24,8 @@ export default function Skills(props: SkillsProps) {
           </div>
         </div>
       </div>
-      <div className="grid grid-rows-2 grid-cols-1 items-center place-items-center flex-wrap my-36 gap-y-44">
-        <div className="flex items-center justify-around w-full">
+      <div className="grid grid-rows-2 grid-cols-1 items-center place-items-center flex-wrap my-20 md:my-36 md:gap-y-44">
+        <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center place-items-center w-full gap-y-44">
           <Folder
             icon={
               <svg
@@ -87,7 +87,7 @@ export default function Skills(props: SkillsProps) {
             description="Superset do JavaScript que adiciona tipagem estática opcional. Ajuda a evitar erros comuns durante o desenvolvimento."
           />
         </div>
-        <div className="flex items-center justify-around w-full">
+        <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center place-items-center w-full gap-y-44 md:my-0 my-24">
           <Folder
             icon={
               <svg
@@ -149,7 +149,7 @@ export default function Skills(props: SkillsProps) {
             description="Framework minimalista para Node.js usado na criação de APIs e servidores. Facilita o roteamento e o gerenciamento de requisições HTTP."
           />
         </div>
-        <div className="flex items-center justify-around w-full">
+        <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center place-items-center w-full gap-y-44 md:mt-0 mt-24">
           <Folder
             icon={
               <svg

@@ -37,7 +37,7 @@ const StarBorder = <T extends React.ElementType>({
           animationDuration: speed,
         }}
       ></div>
-      <div className="relative z-1 bg-gradient-to-b from-black to-gray-900 border-4 border-gray-800 text-white text-center text-[16px] py-[16px] md:px-0 px-[26px] rounded-[20px]">
+      <div className="relative z-1 bg-gradient-to-b from-black to-gray-900 border-4 border-gray-800 text-white text-center text-[16px] py-[16px] md:px-0 rounded-[20px]">
         {children}
       </div>
     </Component>

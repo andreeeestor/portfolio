@@ -9,6 +9,7 @@ import { RevealLinks } from "@/components/RevealLinks";
 import SocialLinks from "@/components/sections/SocialLinks";
 import Contact from "@/components/sections/ContactForm";
 import Skills from "@/components/sections/Skills";
+import StarBorder from "@/components/StarBorder";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Hero />
       <main className="">
         <UpButton />
-        <section id="about" className="w-full bg-black shadow-md rounded-3xl p-8 border-2 border-solid border-slate-700">
+        <StarBorder id="about" className="w-full">
+          <div className="text-start px-8 py-4">
           <h1 className="font-sequel uppercase text-primary text-4xl">
             {"// sobre mim"}
           </h1>
@@ -48,7 +50,8 @@ export default function Home() {
               performance, animações, responsividade e SEO.
             </p>
           </div>
-        </section>
+          </div>
+        </StarBorder>
         <SocialLinks />
         <Skills id={"skills"} />
         <Projects id={"projects"} />

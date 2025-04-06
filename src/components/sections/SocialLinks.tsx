@@ -3,7 +3,7 @@ import { RevealLinks } from "../RevealLinks";
 interface SocialLinksProps {}
 export default function SocialLinks(props: SocialLinksProps) {
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center w-full">
+    <section className="flex flex-col lg:flex-row justify-between items-center w-full lg:mt-0 mt-24">
       <div className="flex flex-col space-y-6">
         <h1 className="font-sequel uppercase text-4xl">{"// Minhas Redes"}</h1>
         <h6 className="text-2xl font-medium uppercase">
