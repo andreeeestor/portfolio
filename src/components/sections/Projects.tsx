@@ -1,6 +1,7 @@
 "use client";
-import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
+import { ArrowUpRight, Code, GithubLogo } from "@phosphor-icons/react";
 import ProjectsCards from "../ProjectsCards";
+import FlowerShape from "../icons/FlowerShape";
 
 interface ProjectsProps {
   id: string;
@@ -9,15 +10,59 @@ export default function Projects(props: ProjectsProps) {
   return (
     <>
       <div id={props.id} className="mt-12 w-full h-2 bg-black" />
-      {/* <section>
-        <h1 className="lg:-translate-y-9 2xl:-translate-y-[5.4rem] lg :text-[8rem] 2xl:text-[9.9rem] uppercase font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text"> */}
 
       <section className="relative">
-        <h1 className="absolute uppercase -top-[6px] text-4xl lg:text-[9.4rem] font-sequel tracking-wide bg-gradient-to-t from-gray-900 to-black text-transparent bg-clip-text">
-          {/* <h1 className="absolute -top-[5.785rem] text-[11.1rem] uppercase font-sequel tracking-wide"> */}
-          {"//Projetos"}
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 pt-24 sm:pt-52">
+        <div className="w-full bg-[#c0f48c] py-12 mb-16 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+            <div className="absolute top-4 left-8 text-6xl font-bold">
+              {"{ }"}
+            </div>
+            <Code
+              className="absolute bottom-4 right-12 text-6xl"
+              weight="bold"
+            />
+          </div>
+
+          <div className="container mx-auto px-8">
+            <h1 className="font-sequel uppercase text-black text-5xl md:text-7xl lg:text-8xl relative z-10 tracking-tighter font-bold space-x-3">
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                {"// "}
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                P
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                R
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                O
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                J
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                E
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                T
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                O
+              </span>
+              <span className="inline-block transform hover:scale-105 transition-transform duration-300">
+                S
+              </span>
+            </h1>
+
+            <div className="w-32 h-1 bg-black mt-4 mb-2 rounded-full"></div>
+            <p className="text-black font-medium opacity-80 text-lg max-w-lg">
+              Uma coleção dos meus trabalhos mais recentes em desenvolvimento
+              web e mobile.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 px-4">
           <ProjectsCards
             title="CoverSpot"
             description="Descrição bacana. Feito em "

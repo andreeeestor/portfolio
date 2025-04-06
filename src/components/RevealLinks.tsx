@@ -5,7 +5,7 @@ import { ArrowCircleRight } from "@phosphor-icons/react";
 
 export const RevealLinks: FC = () => {
   return (
-    <section className="grid place-content-center px-8 py-24 text-black">
+    <section className="grid place-content-center px-2 sm:px-8 py-24 text-black">
       <div className="flex items-center gap-x-6">
         <ArrowCircleRight className=" text-4xl sm:text-7xl md:text-8xl" />
         <FlipLink href="https://www.linkedin.com/in/andre-nestor/">
