@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
 interface FolderProps {
@@ -99,14 +99,15 @@ const Folder: React.FC<FolderProps> = ({
             onMouseMove={handlePaperMouseMove}
             onMouseLeave={handlePaperMouseLeave}
             className={`absolute z-20 p-2 transition-all duration-300 ease-in-out bg-white rounded-lg
-              ${open 
-                ? "w-[120px] h-auto min-h-[90px] -translate-x-1/2 left-1/2" 
-                : "w-[90%] h-[80%] bottom-[10%] left-1/2 -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
+              ${
+                open
+                  ? "w-[120px] h-auto min-h-[90px] -translate-x-1/2 left-1/2"
+                  : "w-[90%] h-[80%] bottom-[10%] left-1/2 -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
               }`}
             style={{
               backgroundColor: paperColor,
-              transform: open 
-                ? `translate(-50%, -75%) rotate(0deg) translate(${paperOffset.x}px, ${paperOffset.y}px)` 
+              transform: open
+                ? `translate(-50%, -75%) rotate(0deg) translate(${paperOffset.x}px, ${paperOffset.y}px)`
                 : undefined,
               boxShadow: open ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
               opacity: description || open ? 1 : 0,
@@ -114,11 +115,13 @@ const Folder: React.FC<FolderProps> = ({
           >
             {open && (
               <div className="flex flex-col items-center">
-                <p className="text-center text-[8px] text-black">{description}</p>
+                <p className="text-center text-[8px] text-black">
+                  {description}
+                </p>
               </div>
             )}
           </div>
-          
+
           <div
             className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out shadow-2xl ${
               !open ? "group-hover:[transform:skew(15deg)_scaleY(0.6)]" : ""
@@ -128,8 +131,7 @@ const Folder: React.FC<FolderProps> = ({
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(15deg) scaleY(0.6)" }),
             }}
-          >
-          </div>
+          ></div>
           <div
             className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out ${
               !open ? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]" : ""
@@ -140,9 +142,7 @@ const Folder: React.FC<FolderProps> = ({
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
           >
-            <div className="size-8 absolute bottom-1.5 right-1.5">
-              {icon}
-            </div>
+            <div className="size-8 absolute bottom-1.5 right-1.5">{icon}</div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Code } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
-import ThunderShape from "./icons/ThunderShape";
+import ThunderShape from "../icons/ThunderShape";
 
 const SpringModal = ({
     isOpen,
