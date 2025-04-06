@@ -1,6 +1,6 @@
-import Folder from "../Folder";
+import Folder from "../ui/Folder";
 import ThunderShape from "../icons/ThunderShape";
-import StarBorder from "../StarBorder";
+import StarBorder from "../ui/StarBorder";
 
 interface SkillsProps {
   id: string;

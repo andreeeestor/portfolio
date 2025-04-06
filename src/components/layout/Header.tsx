@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
-import ResumeButton from "./ResumeButton";
+import ResumeButton from "../ui/ResumeButton";
 import { CaretDown, Globe } from "@phosphor-icons/react";
 
 type Language = "pt" | "en";

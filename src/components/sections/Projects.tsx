@@ -1,6 +1,6 @@
 "use client";
 import { ArrowUpRight, Code, GithubLogo } from "@phosphor-icons/react";
-import ProjectsCards from "../ProjectsCards";
+import ProjectsCards from "./ProjectsCards";
 import FlowerShape from "../icons/FlowerShape";
 
 interface ProjectsProps {
@@ -56,8 +56,8 @@ export default function Projects(props: ProjectsProps) {
 
             <div className="w-32 h-1 bg-black mt-4 mb-2 rounded-full"></div>
             <p className="text-black font-medium opacity-80 text-lg max-w-lg">
-              Uma coleção dos meus trabalhos mais recentes em desenvolvimento
-              web e mobile.
+              Uma coleção dos meus projetos mais recentes em desenvolvimento web
+              e mobile.
             </p>
           </div>
         </div>

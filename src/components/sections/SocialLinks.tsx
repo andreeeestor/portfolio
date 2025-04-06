@@ -1,4 +1,4 @@
-import { RevealLinks } from "../RevealLinks";
+import { RevealLinks } from "../animations/RevealLinks";
 
 interface SocialLinksProps {}
 export default function SocialLinks(props: SocialLinksProps) {

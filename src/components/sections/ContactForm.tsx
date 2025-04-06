@@ -1,7 +1,7 @@
 import { PhoneCall } from "@phosphor-icons/react/dist/ssr";
-import BubbleText from "../BubbleText";
-import ScrollVelocity from "../ScrollVelocity";
-import StarBorder from "../StarBorder";
+import BubbleText from "../animations/BubbleText";
+import ScrollVelocity from "../animations/ScrollVelocity";
+import StarBorder from "../ui/StarBorder";
 
 interface ContactProps {
   id: string;

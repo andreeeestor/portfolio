@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowDownLeft, ArrowUpRight } from "@phosphor-icons/react";
-import SpringModal from "./Modal";
+import SpringModal from "../ui/Modal";
 import { useState } from "react";
 
 interface ProjectsCardsProps {
