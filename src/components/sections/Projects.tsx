@@ -65,23 +65,23 @@ export default function Projects(props: ProjectsProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 px-4">
           <ProjectsCards
             title="CoverSpot"
-            description="Descrição bacana. Feito em "
+            description="Software que facilita a reserva de performances musicais ao vivo em estabelecimentos."
             imageUrl="../../../images/image.png"
           />
           <ProjectsCards
             withArrow
             title="Bon Voyage"
-            description="Descrição bacana. Feito em "
+            description="Software de gerenciamento de viagem com roteiro personalizado por uma IA."
             imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
           />
           <ProjectsCards
-            title="Projetin"
-            description="Descrição bacana. Feito em "
-            imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
+            title="VoxGPT"
+            description="Chatbot focado em gerar roteiro turístico."
+            imageUrl="../../../images/voxgpt.jpg"
           />
           <ProjectsCards
             title="NearbyApp"
-            description="Descrição bacana. Feito em "
+            description="Aplicativo iOS de clube de benefícios com cupons para utilizar em estabelecimentos pertos de você."
             imageUrl="../../../images/business-people-using-maps-phones.jpg"
           />
           <article className="w-[335px] sm:w-96 space-y-8">
@@ -105,9 +105,9 @@ export default function Projects(props: ProjectsProps) {
             </a>
           </article>
           <ProjectsCards
-            title="Projetin"
-            description="Descrição bacana. Feito em "
-            imageUrl="https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg"
+            title="Estoque"
+            description="Sistema de gerenciamento de estoque."
+            imageUrl="../../../images/estoque.jpg"
           />
         </div>
       </section>

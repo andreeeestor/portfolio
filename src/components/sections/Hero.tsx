@@ -44,7 +44,7 @@ export default function Hero(props: HeroProps) {
               animate={{ y: 0 }}
               exit={{ y: "-120%" }}
               staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1 bg-gradient-to-br from-indigo-400 to-purple-300 text-transparent bg-clip-text font-bold"
+              splitLevelClassName="overflow-hidden mb-1 bg-gradient-to-br from-indigo-400 to-purple-300 text-transparent bg-clip-text font-bold"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={2000}
             />
