@@ -32,11 +32,13 @@ export default function Home() {
             </div>
             <div className="grid place-items-center md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 md:gap-x-8">
               <Image
-                src={"/images/apagaissoaq.jpg"}
+                src={"/images/eu.jpeg"}
                 alt="Minha Foto"
-                className="w-full h-96 bg-white rounded-3xl"
-                width={100}
-                height={100}
+                className="w-full h-96 bg-white rounded-3xl object-cover"
+                quality={100}
+                width={1000}
+                height={768}
+                priority
               />
               <p className="text-white text-lg leading-8">
                 Olá, sou o André, tenho 19 anos e me formei no ensino médio
