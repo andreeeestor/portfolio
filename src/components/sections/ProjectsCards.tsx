@@ -4,11 +4,22 @@ import { ArrowDownLeft, ArrowUpRight } from "@phosphor-icons/react";
 import SpringModal from "../ui/Modal";
 import { useState } from "react";
 
+interface ProjectInfo {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  status?: "development" | "completed";
+}
+
 interface ProjectsCardsProps {
   withArrow?: boolean;
   title: string;
   description: string;
   imageUrl: string;
+  projectInfo: ProjectInfo;
+  status?: "development" | "completed";
 }
 
 export default function ProjectsCards({
@@ -16,6 +27,8 @@ export default function ProjectsCards({
   title,
   description,
   imageUrl,
+  projectInfo,
+  status,
 }: ProjectsCardsProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -47,6 +60,13 @@ export default function ProjectsCards({
         >
           <h3 className="text-2xl font-bold mb-2">{title}</h3>
           <p className="text-sm">{description}</p>
+
+          {status === "development" && (
+            <div className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-orange-300 flex items-center">
+              <span className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></span>
+              EM DESENVOLVIMENTO
+            </div>
+          )}
         </motion.div>
         <div
           onClick={() => setIsOpen(true)}
@@ -64,7 +84,11 @@ export default function ProjectsCards({
           </div>
         )}
       </motion.article>
-      <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} title="Bon Voyage" />
+      <SpringModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        projectInfo={projectInfo}
+      />
     </>
   );
 }
