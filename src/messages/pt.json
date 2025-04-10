@@ -1,0 +1,42 @@
+{
+    "header" : {
+        "about": "SOBRE MIM",
+        "skills": "SKILLS",
+        "projects": "PROJETOS",
+        "contact": "CONTATO",
+        "Curriculum": "Meu Currículo"
+    },
+    "hero": {
+        "greeting": "OI! EU SOU O",
+        "occupation": "Desenvolvedor"
+    },
+    "about": {
+        "title": "// SOBRE MIM",
+        "altImage": "Minha Foto",
+        "description": "Olá, sou o André, tenho 19 anos e me formei no ensino médio técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e Mobile, atualmente estou no 3º período no curso superior de Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG. Desenvolvo sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO."
+    },
+    "socialLinks": {
+        "phrase": "Somos aquilo que fazemos repetidamente. A excelência, portanto, não é um ato, mas um hábito."
+    },
+    "skills": {
+        "reactjs": "",
+        "nextjs": "",
+        "javascript": "",
+        "typescript": "",
+        "nodejs": "",
+        "tailwind": "",
+        "prisma": "",
+        "express": "",
+        "php": "",
+        "uikit": "",
+        "swift": "",
+        "git": ""
+    },
+    "projects": {
+        "title": "PROJETOS",
+        "description": "Uma coleção dos meus projetos mais recentes em desenvolvimento web e mobile."
+    },
+    "contact": {
+        "title": "CONTATO"
+    }
+}

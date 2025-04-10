@@ -1,0 +1,16 @@
+{
+    "header": {
+      "about": "About me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "HI, I'M",
+      "occupation": "Developer"
+    },
+    "about": {
+      "title": "// about me",
+      "description": "Hello, I'm André, I'm 19 years old and I graduated from COTEMIG technical high school, where I took the Web and Mobile development course. I'm currently in the 3rd period of the Systems Analysis and Development course at COTEMIG College. I develop websites and iOS applications with modern and high-quality interfaces, focused on performance, animations, responsiveness, and SEO."
+    }
+  }
