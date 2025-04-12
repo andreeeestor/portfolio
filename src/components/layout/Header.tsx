@@ -178,6 +178,7 @@ const AnimatedHamburgerButton = ({
         initial={false}
         animate={active ? "open" : "closed"}
         onClick={() => setActive(!active)}
+        aria-label="Menu"
         className="relative h-14 w-14 rounded-full bg-white shadow-md transition-colors hover:bg-gray-50"
       >
         <motion.span
