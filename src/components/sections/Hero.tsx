@@ -2,16 +2,17 @@
 import { HandWaving, Stack } from "@phosphor-icons/react";
 import DecryptedText from "../animations/DecryptedText";
 import RotatingText from "../animations/RotatingText";
+import { useTranslations } from "next-intl";
 
-interface HeroProps {}
-export default function Hero(props: HeroProps) {
+export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <section className="w-full h-screen flex flex-col justify-evenly">
       <section className="grid grid-cols-1 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 place-items-center">
         <HandWaving className="sm:size-48 size-40" />
         <div className="text-4xl sm:text-7xl md:text-8xl font-medium uppercase flex flex-col md:text-start text-center">
           <span className="text-3xl sm:text-5xl md:text-6xl md:pb-0 pb-7">
-            oi! eu sou o
+            {t("title")}
           </span>
           <DecryptedText
             text="André "
@@ -29,7 +30,7 @@ export default function Hero(props: HeroProps) {
           />
           <h3 className="flex items-center pt-6 gap-x-2">
             <span className="text-xl sm:text-2xl md:text-3xl ">
-              Desenvolvedor
+              {t("subtitle")}
               {/* <span className="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text font-bold">
               {" "}
               Front-End
@@ -52,9 +53,12 @@ export default function Hero(props: HeroProps) {
         </div>
       </section>
       <section className="animate-bounce flex justify-center items-center">
-        <div className="cursor-pointer text-5xl -rotate-90 pb-[5px] flex justify-center items-center rounded-full size-16 shadow-md bg-black text-[#ACAAFF]">
+        <a
+          href="#about"
+          className="cursor-pointer text-5xl -rotate-90 pb-[5px] flex justify-center items-center rounded-full size-16 shadow-md bg-black text-[#ACAAFF]"
+        >
           ⇜
-        </div>
+        </a>
       </section>
     </section>
   );

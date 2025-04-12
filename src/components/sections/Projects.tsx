@@ -1,22 +1,23 @@
 "use client";
 import { ArrowUpRight, Code, GithubLogo } from "@phosphor-icons/react";
 import ProjectsCards from "./ProjectsCards";
+import { useTranslations } from "next-intl";
 
 interface ProjectsProps {
   id: string;
 }
 export default function Projects(props: ProjectsProps) {
+  const t = useTranslations("projects");
   const projectsData = [
     {
       id: "coverspot",
       title: "CoverSpot",
-      cardDescription:
-        "Software que facilita a reserva de performances musicais ao vivo em estabelecimentos.",
+      cardDescription: `${t("CoverSpotSubtitle")}`,
       imageUrl: "../../../images/image.png",
       projectInfo: {
         title: "CoverSpot",
         description:
-          "Plataforma full-stack que revoluciona a forma como músicos e estabelecimentos se conectam para performances ao vivo. O sistema inclui gerenciamento de agendas, negociação direta de cachês e sistema integrado de avaliações. A arquitetura escalável permite o gerenciamento simultâneo de múltiplos eventos e a análise de dados para insights sobre tendências musicais locais.",
+          `${t("CoverSpotDescription")}`,
         technologies: [
           "React",
           "Node.js",
@@ -34,15 +35,14 @@ export default function Projects(props: ProjectsProps) {
     {
       id: "bonvoyage",
       title: "Bon Voyage",
-      cardDescription:
-        "Software de gerenciamento de viagem com roteiro personalizado por uma IA.",
+      cardDescription: `${t("BonVoyageSubtitle")}`,
       imageUrl:
         "https://www.segueviagem.com.br/wp-content/uploads/2021/01/Aviao-shutterstock_146314307.jpg",
       withArrow: true,
       projectInfo: {
         title: "Bon Voyage",
         description:
-          "Aplicação web inovadora que utiliza inteligência artificial para gerar roteiros de viagem personalizados. O site foi parte de um projeto da matéria PIT(Projeto de Inovação Tecnológica) do Cotemig em 2023, o site oferece ao usuário um guia turístico com orçamento e duração da viagem para criar experiências únicas. Todas as funcionalidades do site foram desenvolvidas por mim.",
+          `${t("BonVoyageDescription")}`,
         technologies: [
           "Next.js",
           "OpenAI API",
@@ -60,12 +60,12 @@ export default function Projects(props: ProjectsProps) {
     {
       id: "voxgpt",
       title: "VoxGPT",
-      cardDescription: "Chatbot focado em gerar roteiro turístico.",
+      cardDescription: `${t("VoxGPTSubtitle")}`,
       imageUrl: "../../../images/voxgpt.jpg",
       projectInfo: {
         title: "VoxGPT",
         description:
-          "Chatbot especializado em turismo que oferece sugestões de roteiros e responde a perguntas sobre destinos. O VoxGPT é um projeto que transforma o planejamento de viagens em uma experiência 		imersiva e personalizada. Através da interface, o usuário informa a cidade de destino e a IA da 		OpenAI gera um roteiro turístico com informações relevantes sobre a cidade e seus pontos 		turísticos, além disso, tem a página de bate-papo com a IA.",
+          `${t("VoxGPTDescription")}`,
         technologies: [
           "Next.js",
           "TailwindCSS",
@@ -84,13 +84,12 @@ export default function Projects(props: ProjectsProps) {
     {
       id: "nearbyapp",
       title: "NearbyApp",
-      cardDescription:
-        "Aplicativo iOS de clube de benefícios com cupons para utilizar em estabelecimentos pertos de você.",
+      cardDescription: `${t("NearbySubtitle")}`,
       imageUrl: "../../../images/business-people-using-maps-phones.jpg",
       projectInfo: {
         title: "NearbyApp",
         description:
-          "O projeto é um aplicativo mobile de clube de benefícios com cupons para utilizar em estabelecimentos próximos a você. Este é um projeto do evento NLW Pocket Mobile que participei.",
+          `${t("NearbyDescription")}`,
         technologies: ["SwiftUI", "Swift", "MVVM-C", "MapKit", "Node.js"],
         githubUrl: "https://github.com/andreeeestor/nearbyapp",
       },
@@ -98,12 +97,12 @@ export default function Projects(props: ProjectsProps) {
     {
       id: "estoque",
       title: "Estoque",
-      cardDescription: "Sistema de gerenciamento de estoque.",
+      cardDescription: `${t("EstoqueSubtitle")}`,
       imageUrl: "../../../images/estoque.jpg",
       projectInfo: {
         title: "Estoque",
         description:
-          "Sistema completo de gerenciamento de estoque com recursos de previsão de demanda e alertas automáticos para reposição. Implementei um dashboard analítico com métricas de desempenho e integrações com sistemas ERP populares. A solução utiliza caching inteligente que reduziu o tempo de carregamento das páginas em 60% e incorpora um robusto sistema de controle de acesso baseado em funções.",
+          `${t("EstoqueDescription")}`,
         technologies: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
         githubUrl: "https://github.com/LuizLimaG/estoque",
       },
@@ -147,10 +146,10 @@ export default function Projects(props: ProjectsProps) {
                 E
               </span>
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">
-                T
+                {t("title6")}
               </span>
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">
-                O
+                {t("title7")}
               </span>
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">
                 S
@@ -159,13 +158,12 @@ export default function Projects(props: ProjectsProps) {
 
             <div className="w-32 h-1 bg-black mt-4 mb-2 rounded-full"></div>
             <p className="text-black font-medium opacity-80 text-lg max-w-lg">
-              Uma coleção dos meus projetos mais recentes em desenvolvimento web
-              e mobile.
+              {t("description")}
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 px-4">
           <ProjectsCards
             key={projectsData[0].id}
             withArrow={projectsData[0].withArrow}
@@ -209,7 +207,7 @@ export default function Projects(props: ProjectsProps) {
               </div>
             </div>
             <h1 className="text-center font-sequel text-3xl sm:text-4xl uppercase">
-              Mais No Meu Repositório
+              {t("repository")}
             </h1>
             <a
               href="https://github.com/andreeeestor?tab=repositories"
@@ -217,7 +215,7 @@ export default function Projects(props: ProjectsProps) {
               className="flex items-center justify-between shadow-xl border-2 border-black px-6 py-4 rounded-2xl transition-all group hover:bg-black hover:text-white"
             >
               <span className="font-semibold text-xl tracking-tight ">
-                Ver Todos
+                {t("seeAll")}
               </span>
               <ArrowUpRight size={32} />
             </a>

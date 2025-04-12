@@ -34,9 +34,9 @@ export default function ProjectsCards({
   return (
     <>
       <motion.article
-        className="w-[335px] sm:w-96 h-[28rem] rounded-2xl relative overflow-visible shadow-lg"
+        className="w-full sm:w-[335px] md:w-96 h-[22rem] sm:h-[28rem] rounded-2xl relative overflow-visible shadow-lg"
         whileHover={{
-          scale: 1.05,
+          scale: 1.02,
           boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
         }}
       >
@@ -58,11 +58,11 @@ export default function ProjectsCards({
           whileHover={{ y: -10 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold mb-2">{title}</h3>
-          <p className="text-sm">{description}</p>
+          <h3 className="text-xl sm:text-2xl font-bold mb-2">{title}</h3>
+          <p className="text-xs sm:text-sm">{description}</p>
 
           {status === "development" && (
-            <div className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-orange-300 flex items-center">
+            <div className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-full shadow-lg border border-orange-300 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></span>
               EM DESENVOLVIMENTO
             </div>

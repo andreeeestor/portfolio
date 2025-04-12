@@ -1,42 +1,65 @@
 {
-    "header" : {
-        "about": "SOBRE MIM",
-        "skills": "SKILLS",
-        "projects": "PROJETOS",
-        "contact": "CONTATO",
-        "Curriculum": "Meu Currículo"
-    },
-    "hero": {
-        "greeting": "OI! EU SOU O",
-        "occupation": "Desenvolvedor"
-    },
-    "about": {
-        "title": "// SOBRE MIM",
-        "altImage": "Minha Foto",
-        "description": "Olá, sou o André, tenho 19 anos e me formei no ensino médio técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e Mobile, atualmente estou no 3º período no curso superior de Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG. Desenvolvo sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO."
-    },
-    "socialLinks": {
-        "phrase": "Somos aquilo que fazemos repetidamente. A excelência, portanto, não é um ato, mas um hábito."
-    },
-    "skills": {
-        "reactjs": "",
-        "nextjs": "",
-        "javascript": "",
-        "typescript": "",
-        "nodejs": "",
-        "tailwind": "",
-        "prisma": "",
-        "express": "",
-        "php": "",
-        "uikit": "",
-        "swift": "",
-        "git": ""
-    },
-    "projects": {
-        "title": "PROJETOS",
-        "description": "Uma coleção dos meus projetos mais recentes em desenvolvimento web e mobile."
-    },
-    "contact": {
-        "title": "CONTATO"
-    }
+  "navigation": {
+    "about": "Sobre mim",
+    "skills": "Skills",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "resumeBtn": "Meu Currículo"
+  },
+  "hero": {
+    "title": "OI! EU SOU O",
+    "subtitle": "Desenvolvedor"
+  },
+  "about": {
+    "title": "// sobre mim",
+    "description": "Olá, sou o André, tenho 19 anos e me formei no ensino médio técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e Mobile, atualmente estou no 3º período no curso superior de Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG. Desenvolvo sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO."
+  },
+  "socialLinks": {
+    "title": "// minhas redes",
+    "phrase": "Somos aquilos que fazemos repetidamente. A excelência, portanto, não é um ato, mas um hábito.",
+    "author": "Aristóteles"
+  },
+  "skills": {
+    "reactjs": "Uma biblioteca JavaScript para criar interfaces de usuário. Uso para desenvolver componentes reutilizáveis e interfaces reativas.",
+    "nextjs": "Framework React para desenvolvimento web com renderização do lado do servidor, otimização de carregamento e facilidade para criar rotas.",
+    "javascript": "Linguagem de programação de alto nível, interpretada e com tipagem dinâmica. Essencial para desenvolvimento web frontend.",
+    "typescript": "Superset do JavaScript que adiciona tipagem estática opcional. Ajuda a evitar erros comuns durante o desenvolvimento.",
+    "nodejs": "Ambiente de execução JavaScript no servidor. Utilizo para criar APIs escaláveis e performáticas, com suporte à programação assíncrona.",
+    "tailwind": "Tailwind CSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas.",
+    "prisma": "ORM moderno para Node.js e TypeScript que facilita o acesso ao banco de dados com segurança de tipos e auto-complete. Uso para modelar e consultar dados com eficiência.",
+    "express": "Framework minimalista para Node.js usado na criação de APIs e servidores. Facilita o roteamento e o gerenciamento de requisições HTTP.",
+    "php": "Criação de aplicações web dinâmicas com PHP, foco em back-end e integração com bancos de dados.",
+    "uikit": "UIKit é um framework tradicional para desenvolvimento iOS. Uso para criar interfaces com controle mais preciso, ideal para projetos que exigem compatibilidade com versões antigas do iOS.",
+    "swift": "Swift é uma linguagem moderna e segura para iOS. SwiftUI é um framework declarativo que uso para construir interfaces fluidas, rápidas e responsivas para apps Apple.",
+    "git": "Sistema de controle de versão distribuído. Uso para gerenciar o histórico do código, colaborar em equipe e manter o projeto versionado com segurança."
+  },
+  "projects": {
+    "title6": "T",
+    "title7": "O",
+    "description": "Uma coleção dos meus projetos mais recentes em desenvolvimento web e mobile.",
+    "CoverSpotSubtitle": "Software que facilita a reserva de performances musicais ao vivo em estabelecimentos.",
+    "BonVoyageSubtitle": "Software de gerenciamento de viagem com roteiro personalizado por uma IA.",
+    "VoxGPTSubtitle": "Chatbot focado em gerar roteiro turístico.",
+    "NearbySubtitle": "Aplicativo iOS de clube de benefícios com cupons para utilizar em estabelecimentos pertos de você.",
+    "EstoqueSubtitle": "Sistema de gerenciamento de estoque.",
+    "CoverSpotDescription": "A plataforma full-stack que revoluciona a forma como músicos e estabelecimentos se conectam para performances ao vivo. O sistema inclui gerenciamento de agendas, negociação direta de cachês e sistema integrado de avaliações. A arquitetura escalável permite o gerenciamento simultâneo de múltiplos eventos e a análise de dados para insights sobre tendências musicais locais.",
+    "BonVoyageDescription": "Aplicação web inovadora que utiliza inteligência artificial para gerar roteiros de viagem personalizados. O site foi parte de um projeto da matéria PIT(Projeto de Inovação Tecnológica) do Cotemig em 2023, o site oferece ao usuário um guia turístico com orçamento e duração da viagem para criar experiências únicas. Todas as funcionalidades do site foram desenvolvidas por mim.",
+    "VoxGPTDescription": "Chatbot especializado em turismo que oferece sugestões de roteiros e responde a perguntas sobre destinos. O VoxGPT é um projeto que transforma o planejamento de viagens em uma experiência imersiva e personalizada. Através da interface, o usuário informa a cidade de destino e a IA da OpenAI gera um roteiro turístico com informações relevantes sobre a cidade e seus pontos turísticos, além disso, tem a página de bate-papo com a IA.",
+    "NearbyDescription": "O projeto é um aplicativo mobile de clube de benefícios com cupons para utilizar em estabelecimentos próximos a você. Este é um projeto do evento NLW Pocket Mobile que participei.",
+    "EstoqueDescription": "Sistema completo de gerenciamento de estoque com recursos de previsão de demanda e alertas automáticos para reposição. Implementei um dashboard analítico com métricas de desempenho e integrações com sistemas ERP populares. A solução utiliza caching inteligente que reduziu o tempo de carregamento das páginas em 60% e incorpora um robusto sistema de controle de acesso baseado em funções.",
+    "repository": "Mais No Meu Repositório",
+    "techs": "Tecnologias",
+    "seeAll": "Ver Todos",
+    "close": "Fechar",
+    "openSite": "Ver Site"
+  },
+  "contact": {
+    "title": "Entre em Contato // ",
+    "name": "Nome:",
+    "email": "Email:",
+    "message": "Digite sua mensagem...",
+    "send": "Enviar",
+    "or": "OU",
+    "phoneNumberAlert": "Número copiado para a área de transferência!"
+  }
 }

@@ -1,13 +1,16 @@
 "use client";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 
 const BubbleText = () => {
+  const t  = useTranslations("contact");
   const phoneNumber = "+55 31 99820-2542";
 
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(phoneNumber)
-      .then(() => alert("Número copiado!"))
+      .then(() => toast.success(t("phoneNumberAlert")))
       .catch((err) => console.error("Erro ao copiar:", err));
   };
   useEffect(() => {

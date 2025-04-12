@@ -7,8 +7,11 @@ import SocialLinks from "@/components/sections/SocialLinks";
 import Contact from "@/components/sections/ContactForm";
 import Skills from "@/components/sections/Skills";
 import StarBorder from "@/components/ui/StarBorder";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("about");
+
   return (
     <>
       <Hero />
@@ -17,7 +20,7 @@ export default function Home() {
         <StarBorder id="about" className="w-full">
           <div className="text-start px-8 py-4">
             <h1 className="font-sequel uppercase text-primary text-4xl">
-              {"// sobre mim"}
+              {t("title")}
             </h1>
             <div className="relative">
               <div className="w-full h-[2px] bg-[#c0f48c] my-8">
@@ -40,15 +43,7 @@ export default function Home() {
                 height={768}
                 priority
               />
-              <p className="text-white text-lg leading-8">
-                Olá, sou o André, tenho 19 anos e me formei no ensino médio
-                técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e
-                Mobile, atualmente estou no 3º período no curso superior de
-                Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG.
-                Desenvolvo sites e aplicativos iOS com interfaces modernas e de
-                alta qualidade, concentrado em performance, animações,
-                responsividade e SEO.
-              </p>
+              <p className="text-white text-lg leading-8">{t("description")}</p>
             </div>
           </div>
         </StarBorder>

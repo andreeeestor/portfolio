@@ -3,6 +3,9 @@ import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import ResumeButton from "../ui/ResumeButton";
 import { CaretDown, Globe } from "@phosphor-icons/react";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Language = "pt" | "en";
 
@@ -87,12 +90,22 @@ const LanguageOption = ({ language, label, onClick }: LanguageOptionProps) => (
 
 const LanguageToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState<"pt" | "en">("pt");
+  const locale = useLocale() as Language;
+  const router = useRouter();
 
-  const handleLanguageChange = (newLanguage: "pt" | "en") => {
-    setLanguage(newLanguage);
+  const handleLanguageChange = (newLanguage: Language) => {
+    if (newLanguage === locale) {
+      setIsOpen(false);
+      return;
+    }
+    
+    const path = window.location.pathname;
+    const currentPath = path.startsWith(`/${locale}`) 
+      ? path.substring(locale.length + 1) || ''
+      : '';
+    
+    router.push(`/${newLanguage}${currentPath ? `/${currentPath}` : ''}`);
     setIsOpen(false);
-    // aqui vai ser a lógica na troca de idiomas
   };
 
   return (
@@ -107,7 +120,7 @@ const LanguageToggle = () => {
           className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/80 backdrop-blur-sm border-2 border-black shadow-sm hover:shadow-md transition-all"
         >
           <Globe size={18} className="text-black" />
-          <span className="font-medium uppercase">{language}</span>
+          <span className="font-medium uppercase">{locale}</span>
           <CaretDown size={12} />
         </div>
         <motion.div
@@ -194,6 +207,8 @@ const AnimatedHamburgerButton = ({
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = useTranslations('navigation');
+  const locale = useLocale();
 
   return (
     <header className="w-full py-6 bg-[#c0f48c] border-b-2 border-black border-x-2 border-x-[#c0f48c] sticky top-0 z-50">
@@ -201,7 +216,7 @@ export default function Header() {
         <ul className="hidden lg:flex items-center gap-6 uppercase font-medium">
           <li className="relative group cursor-pointer">
             <a href="#about" className="hover:opacity-100 transition-all">
-              Sobre mim
+              {t('about')}
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
@@ -209,7 +224,7 @@ export default function Header() {
           <li className="opacity-40 font-bold">{"//"}</li>
           <li className="relative group cursor-pointer">
             <a href="#skills" className="hover:opacity-100 transition-all">
-              Skills
+              {t('skills')}
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
@@ -217,7 +232,7 @@ export default function Header() {
           <li className="opacity-40 font-bold">{"//"}</li>
           <li className="relative group cursor-pointer">
             <a href="#projects" className="hover:opacity-100 transition-all">
-              Projetos
+              {t('projects')}
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
@@ -225,7 +240,7 @@ export default function Header() {
           <li className="opacity-40 font-bold">{"//"}</li>
           <li className="relative group cursor-pointer">
             <a href="#contact" className="hover:opacity-100 transition-all">
-              Contato
+              {t('contact')}
             </a>
             <span className="absolute -bottom-[1px] left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
             <span className="absolute -bottom-[1px] right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all" />
@@ -258,7 +273,7 @@ export default function Header() {
                     className="block px-4 py-2 rounded-md hover:bg-green-100 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Sobre mim
+                    {t('about')}
                   </a>
                 </li>
                 <li>
@@ -267,7 +282,7 @@ export default function Header() {
                     className="block px-4 py-2 rounded-md hover:bg-green-100 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Projetos
+                    {t('projects')}
                   </a>
                 </li>
                 <li>
@@ -276,7 +291,7 @@ export default function Header() {
                     className="block px-4 py-2 rounded-md hover:bg-green-100 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Skills
+                    {t('skills')}
                   </a>
                 </li>
                 <li>
@@ -285,7 +300,7 @@ export default function Header() {
                     className="block px-4 py-2 rounded-md hover:bg-green-100 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Contato
+                    {t('contact')}
                   </a>
                 </li>
                 <li className="mt-2 px-4">

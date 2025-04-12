@@ -1,11 +1,13 @@
 import Folder from "../ui/Folder";
 import ThunderShape from "../icons/ThunderShape";
 import StarBorder from "../ui/StarBorder";
+import { useTranslations } from "next-intl";
 
 interface SkillsProps {
   id: string;
 }
 export default function Skills(props: SkillsProps) {
+  const t = useTranslations("skills")
   return (
     <StarBorder id={props.id} className="w-full">
       <div className="p-8 pb-0">
@@ -39,7 +41,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Uma biblioteca JavaScript para criar interfaces de usuário. Uso para desenvolver componentes reutilizáveis e interfaces reativas."
+            description={`${t("reactjs")}`}
           />
           <Folder
             icon={
@@ -54,7 +56,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Framework React para desenvolvimento web com renderização do lado do servidor, otimização de carregamento e facilidade para criar rotas."
+            description={`${t("nextjs")}`}
           />
           <Folder
             icon={
@@ -69,7 +71,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Linguagem de programação de alto nível, interpretada e com tipagem dinâmica. Essencial para desenvolvimento web frontend."
+            description={`${t("javascript")}`}
           />
           <Folder
             icon={
@@ -84,7 +86,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Superset do JavaScript que adiciona tipagem estática opcional. Ajuda a evitar erros comuns durante o desenvolvimento."
+            description={`${t("typescript")}`}
           />
         </div>
         <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center place-items-center w-full gap-y-44 md:my-0 my-24">
@@ -101,7 +103,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Ambiente de execução JavaScript no servidor. Utilizo para criar APIs escaláveis e performáticas, com suporte à programação assíncrona."
+            description={`${t("nodejs")}`}
           />
           <Folder
             icon={
@@ -116,7 +118,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Tailwind CSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas."
+            description={`${t("tailwind")}`}
           />
           <Folder
             icon={
@@ -131,7 +133,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="ORM moderno para Node.js e TypeScript que facilita o acesso ao banco de dados com segurança de tipos e auto-complete. Uso para modelar e consultar dados com eficiência."
+            description={`${t("prisma")}`}
           />
           <Folder
             icon={
@@ -146,17 +148,24 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Framework minimalista para Node.js usado na criação de APIs e servidores. Facilita o roteamento e o gerenciamento de requisições HTTP."
+            description={`${t("express")}`}
           />
         </div>
         <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center place-items-center w-full gap-y-44 md:mt-0 mt-24">
           <Folder
             icon={
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PHP</title><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg>
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>PHP</title>
+                <path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z" />
+              </svg>
             }
             size={2}
             className="custom-folder"
-            description="Criação de aplicações web dinâmicas com PHP, foco em back-end e integração com bancos de dados."
+            description={`${t("php")}`}
           />
           <Folder
             icon={
@@ -171,7 +180,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Framework tradicional para desenvolvimento iOS. Uso para criar interfaces com controle mais preciso, ideal para projetos que exigem compatibilidade com versões antigas do iOS."
+            description={`${t("uikit")}`}
           />
           <Folder
             icon={
@@ -186,7 +195,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Swift é uma linguagem moderna e segura para iOS. SwiftUI é um framework declarativo que uso para construir interfaces fluidas, rápidas e responsivas para apps Apple."
+            description={`${t("swift")}`}
           />
           <Folder
             icon={
@@ -201,7 +210,7 @@ export default function Skills(props: SkillsProps) {
             }
             size={2}
             className="custom-folder"
-            description="Sistema de controle de versão distribuído. Uso para gerenciar o histórico do código, colaborar em equipe e manter o projeto versionado com segurança."
+            description={`${t("git")}`}
           />
         </div>
       </div>
