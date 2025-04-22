@@ -59,7 +59,14 @@
     "email": "Email:",
     "message": "Type your message...",
     "send": "Send",
+    "sending": "Sending...",
     "or": "OR",
-    "phoneNumberAlert": "Phone number copied to clipboard!"
+    "phoneNumberAlert": "Phone number copied to clipboard!",
+    "success": "Email sent successfully!",
+    "errorRegex": "Please enter a valid email address.",
+    "errorSuspicious": "Please use your personal email.",
+    "errorTimeTaken": "Form filled out too quickly, please try again.",
+    "errorMessage": "Please write a more detailed message.",
+    "error": "Error sending. Please try again later."
   }
 }

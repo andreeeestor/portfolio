@@ -52,7 +52,7 @@ export default async function RootLayout({
       <body
         className={`${spaceGrotesk.className} ${sequel.variable} mx-auto max-w-[1440px] 2xl:px-0 md:px-8 px-4 bg-[#c0f48c] select-none`}
       >
-        <Toaster position="bottom-center" />
+        <Toaster richColors position="bottom-center" />
         <NextIntlClientProvider>
           <Header />
           {children}

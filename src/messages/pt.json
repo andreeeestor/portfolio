@@ -59,7 +59,14 @@
     "email": "Email:",
     "message": "Digite sua mensagem...",
     "send": "Enviar",
+    "sending": "Enviando...",
     "or": "OU",
-    "phoneNumberAlert": "Número copiado para a área de transferência!"
+    "phoneNumberAlert": "Número copiado para a área de transferência!",
+    "success": "Email enviado com sucesso!",
+    "errorRegex": "Por favor, insira um email válido.",
+    "errorSuspicious": "Por favor, use seu email pessoal.",
+    "errorTimeTaken": "Formulário preenchido muito rápido, tente novamente.",
+    "errorMessage": "Por favor, escreva uma mensagem mais detalhada.",
+    "error": "Erro ao enviar. Tente novamente mais tarde."
   }
 }
