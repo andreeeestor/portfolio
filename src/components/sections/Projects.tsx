@@ -163,7 +163,7 @@ export default function Projects(props: ProjectsProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8">
           <ProjectsCards
             key={projectsData[0].id}
             withArrow={projectsData[0].withArrow}

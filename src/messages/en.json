@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "// about me",
-    "description": "Hello, I'm André, I'm 19 years old and I graduated from COTEMIG technical high school, where I took the Web and Mobile development course. I'm currently in the 3rd period of the Systems Analysis and Development course at COTEMIG College. I develop websites and iOS applications with modern and high-quality interfaces, focused on performance, animations, responsiveness, and SEO."
+    "description": "Hello, I'm André, 19 years old, and I graduated from COTEMIG's technical high school, where I completed a course in Web and Mobile Development. I am currently in my 3rd semester of the higher education course in Systems Analysis and Development at Faculdade COTEMIG. My passion lies in developing high-quality, modern websites and iOS applications, focusing on performance, animations, responsiveness, and SEO. I have solid experience in HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js, and Next.js for web, and I am currently studying Swift/SwiftUI for iOS development, in addition to being familiar with consuming REST APIs."
   },
   "socialLinks": {
     "title": "// social links",

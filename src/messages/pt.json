@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "// sobre mim",
-    "description": "Olá, sou o André, tenho 19 anos e me formei no ensino médio técnico do COTEMIG, onde cursei o curso de desenvolvimento Web e Mobile, atualmente estou no 3º período no curso superior de Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG. Desenvolvo sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO."
+    "description": "Olá, sou o André, tenho 19 anos e me formei no ensino médio técnico do COTEMIG, onde cursei o curso de Desenvolvimento Web e Mobile. Atualmente estou no 3º período do curso superior de Análise e Desenvolvimento de Sistemas na Faculdade COTEMIG. Minha paixão está em desenvolver sites e aplicativos iOS com interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO. Tenho experiência sólida em HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js e Next.js para web, e estudando Swift/SwiftUI para desenvolvimento iOS, além de familiaridade com o consumo de APIs REST."
   },
   "socialLinks": {
     "title": "// minhas redes",

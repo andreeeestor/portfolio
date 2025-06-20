@@ -37,7 +37,7 @@ export default function Home() {
               <Image
                 src={"/images/eu.jpeg"}
                 alt="Minha Foto"
-                className="w-full h-96 bg-white rounded-3xl object-cover"
+                className="w-full h-[475px] bg-white rounded-3xl object-cover"
                 quality={100}
                 width={1000}
                 height={768}
