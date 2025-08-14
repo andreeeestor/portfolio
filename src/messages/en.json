@@ -12,7 +12,43 @@
   },
   "about": {
     "title": "// about me",
-    "description": "Hello, I'm André, 19 years old, and I graduated from COTEMIG's technical high school, where I completed a course in Web and Mobile Development. I am currently in my 3rd semester of the higher education course in Systems Analysis and Development at Faculdade COTEMIG. My passion lies in developing high-quality, modern websites and iOS applications, focusing on performance, animations, responsiveness, and SEO. I have solid experience in HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js, and Next.js for web, and I am currently studying Swift/SwiftUI for iOS development, in addition to being familiar with consuming REST APIs."
+    "description": "Hello, I'm André, 19 years old, and I graduated from COTEMIG's technical high school, where I completed a course in Web and Mobile Development. I am currently in my 4th semester of the higher education course in Systems Analysis and Development at Faculdade COTEMIG. My passion lies in developing high-quality, modern websites and iOS applications, focusing on performance, animations, responsiveness, and SEO. I have solid experience in HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js, and Next.js for web, React Native for mobile and I am currently studying Swift/SwiftUI for iOS development, in addition to being familiar with consuming REST APIs."
+  },
+  "career": {
+    "title": "Professional Experience",
+    "journeyText": "Journey in Evolution",
+    "journeySubtext": "Building the future of technology ✨",
+    "positions": {
+      "monitor": {
+        "title": "Web/Mobile Technical Monitor",
+        "company": "COTEMIG",
+        "location": "Belo Horizonte, MG",
+        "type": "INTERNSHIP",
+        "status": "Completed",
+        "description": [
+          "Worked as Technical Monitor for the Web and Mobile development course at COTEMIG college.",
+          "Assisted in Framework classes (JavaScript/React.js + Dart/Flutter), Web Back-End Development (Node.js + TypeScript + Express.js + PHP), Android Development (Kotlin) and iOS (Swift + SwiftUI).",
+          "Developed skills such as communication, analytical ability, critical thinking, and problem solving."
+        ]
+      },
+      "frontend": {
+        "title": "Front-End Developer",
+        "company": "Second Mind",
+        "location": "Remote",
+        "type": "INTERNSHIP",
+        "status": "Current",
+        "description": [
+          "Development of web and mobile solutions for the Physioclin management system (healthcare).",
+          "Implementation of dynamic routes, complex forms with React Hook Form and reusable components.",
+          "Mobile development with dynamic components, pagination, real-time filters and REST API integration.",
+          "Active participation in agile team (SCRUM) with feature planning and delivery."
+        ]
+      }
+    },
+    "timeline": {
+      "current": "Current",
+      "inProgress": "In progress"
+    }
   },
   "socialLinks": {
     "title": "// social links",

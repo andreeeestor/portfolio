@@ -8,6 +8,7 @@ import Contact from "@/components/sections/ContactForm";
 import Skills from "@/components/sections/Skills";
 import StarBorder from "@/components/ui/StarBorder";
 import { useTranslations } from "next-intl";
+import CareerSection from "@/components/sections/CareerStepper";
 
 export default function Home() {
   const t = useTranslations("about");
@@ -46,6 +47,7 @@ export default function Home() {
               <p className="text-white text-lg leading-8">{t("description")}</p>
             </div>
           </div>
+          <CareerSection />
         </StarBorder>
         <SocialLinks />
         <Skills id={"skills"} />
