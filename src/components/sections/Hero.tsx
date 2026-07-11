@@ -67,7 +67,7 @@ export default function Hero() {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes floatShape {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           33% { transform: translateY(-14px) rotate(4deg); }
@@ -117,7 +117,7 @@ export default function Hero() {
           animation: fadeIn 1.2s ease forwards;
           opacity: 0;
         }
-      `}</style>
+      `}} />
 
       <section className="relative w-full h-screen overflow-hidden flex flex-col">
 
