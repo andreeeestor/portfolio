@@ -5,7 +5,7 @@ export default function Footer() {
         André Nestor Celino
       </h6>
       <span className="font-bold px-2">{`//`}</span>
-      <h6>{`2025`}</h6>
+      <h6>{`2026`}</h6>
     </footer>
   );
 }

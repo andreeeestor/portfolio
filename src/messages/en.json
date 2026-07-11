@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "// about me",
-    "description": "Hello, I'm André, 19 years old, and I graduated from COTEMIG's technical high school, where I completed a course in Web and Mobile Development. I am currently in my 4th semester of the higher education course in Systems Analysis and Development at Faculdade COTEMIG. My passion lies in developing high-quality, modern websites and iOS applications, focusing on performance, animations, responsiveness, and SEO. I have solid experience in HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js, and Next.js for web, React Native for mobile and I am currently studying Swift/SwiftUI for iOS development, in addition to being familiar with consuming REST APIs."
+    "description": "Hello, I'm André, 20 years old, and I graduated from COTEMIG's technical high school, where I completed a course in Web and Mobile Development. I am currently in my 5th semester of the higher education course in Systems Analysis and Development at Faculdade COTEMIG. My passion lies in developing high-quality, modern websites and iOS applications, focusing on performance, animations, responsiveness, and SEO. I have solid experience in HTML, CSS, JavaScript, TypeScript, TailwindCSS, React.js, and Next.js for web, React Native for mobile and I am currently studying Swift/SwiftUI for iOS development, in addition to being familiar with consuming REST APIs."
   },
   "career": {
     "title": "Professional Experience",
@@ -36,12 +36,27 @@
         "company": "Second Mind",
         "location": "Remote",
         "type": "INTERNSHIP",
-        "status": "Current",
+        "status": "Completed",
         "description": [
           "Development of web and mobile solutions for the Physioclin management system (healthcare).",
           "Implementation of dynamic routes, complex forms with React Hook Form and reusable components.",
           "Mobile development with dynamic components, pagination, real-time filters and REST API integration.",
           "Active participation in agile team (SCRUM) with feature planning and delivery."
+        ]
+      },
+      "kukac": {
+        "title": "Junior Front-End Developer",
+        "company": "Kukac",
+        "location": "Belo Horizonte, MG",
+        "type": "FULL-TIME",
+        "status": "Current",
+        "intro": "Working as a Junior Front-End Developer, providing services for COPASA, Drogaria Araújo and Abrasel.",
+        "description": [
+          "Implementation of UX/UI improvements and bug fixes in interactive components (e.g., carousels and listings)",
+          "Creation of a news section integrated with API, including dynamic data consumption on the front-end",
+          "Development of a complete solution for RSS ingestion, using Python for processing and PHP + SQLite as backend",
+          "Handling system integrations, including solving issues such as CORS",
+          "Structuring pages and components in WCM with a focus on organization and ease of maintenance"
         ]
       }
     },
