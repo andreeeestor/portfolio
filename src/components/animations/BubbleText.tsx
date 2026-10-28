@@ -15,13 +15,13 @@ const BubbleText = () => {
   // The "bubble" weight/color effect on hover is pure CSS (see `.hover-text` in globals.css).
 
   return (
-    <h2
+    <p
       title="Clique para copiar o número"
       onClick={copyToClipboard}
       className="cursor-pointer hover-text text-center text-3xl sm:text-5xl font-thin text-indigo-300"
     >
       <Text>{phoneNumber}</Text>
-    </h2>
+    </p>
   );
 };
 

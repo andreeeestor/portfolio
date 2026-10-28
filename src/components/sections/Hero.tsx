@@ -134,7 +134,7 @@ export default function Hero() {
         </div> */}
 
         <div
-          className="hero-corner absolute right-8 top-8 text-[11px] uppercase tracking-[0.2em] text-black/40 font-medium"
+          className="hero-corner absolute right-8 top-8 text-[11px] uppercase tracking-[0.2em] text-black/75 font-semibold"
           style={{ animationDelay: "0.6s" }}
         >
           2026
@@ -173,7 +173,7 @@ export default function Hero() {
           >
             Nestor
             <span
-              className="font-sans normal-case text-black/60 font-medium inline-block"
+              className="font-sans normal-case text-black/75 font-medium inline-block"
               style={{
                 fontSize: "clamp(1rem, 2.2vw, 2.2rem)",
                 letterSpacing: 0,
@@ -188,6 +188,7 @@ export default function Hero() {
           <div className="w-full flex justify-center mt-32">
             <a
               href="#about"
+              aria-label="Rolar para sobre mim"
               className="hero-sub flex flex-col items-center gap-2 group"
               style={{
                 animationDelay: "0.8s",
@@ -206,14 +207,14 @@ export default function Hero() {
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M5 8L11 14L17 8"
-                    stroke="rgba(0,0,0,0.6)"
+                    stroke="rgba(0,0,0,0.85)"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
               </div>
-              <span className="text-[9px] uppercase tracking-[0.28em] text-black/30 group-hover:text-black/60 transition-colors duration-300">
+              <span className="text-[9px] uppercase tracking-[0.28em] text-black/75 group-hover:text-black font-semibold transition-colors duration-300">
                 Scroll
               </span>
             </a>
@@ -222,19 +223,19 @@ export default function Hero() {
 
         <div className="absolute bottom-10 left-0 right-0 flex justify-between items-end">
           <div className="hero-sub max-w-[240px]" style={{ animationDelay: "0.7s" }}>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-black/50 leading-relaxed font-medium">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-black/80 leading-relaxed font-semibold">
               {t("subtitle")} Front-End.
             </p>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-black/35 leading-relaxed mt-1">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-black/75 leading-relaxed mt-1 font-medium">
               Belo Horizonte, BR.
             </p>
           </div>
 
           <div className="hero-sub max-w-[200px] text-right" style={{ animationDelay: "0.9s" }}>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-black/50 leading-relaxed font-medium">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-black/80 leading-relaxed font-semibold">
               Web · Mobile · iOS · AI
             </p>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-black/35 leading-relaxed mt-1">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-black/75 leading-relaxed mt-1 font-medium">
               Open to learn & evolve
             </p>
           </div>

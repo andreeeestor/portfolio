@@ -69,7 +69,9 @@ export default function ProjectsCards({
             </div>
           )}
         </div>
-        <div
+        <button
+          type="button"
+          aria-label={`Ver detalhes do projeto ${title}`}
           onClick={openModal}
           onPointerEnter={() => void loadModal()}
           className="z-10 absolute right-3 bottom-3 rounded-full bg-transparent border-2 border-white transition-all hover:bg-white p-3 group cursor-pointer"
@@ -78,7 +80,7 @@ export default function ProjectsCards({
             size={32}
             className="text-white group-hover:text-black"
           />
-        </div>
+        </button>
 
         {withArrow && (
           <div className="absolute top-[-3rem] right-1/2 translate-x-1/2 flex justify-center items-center rounded-full bg-gradient-to-r from-indigo-400 to-purple-400 p-5 border-[6px] border-[#c0f48c]">

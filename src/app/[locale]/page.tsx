@@ -28,9 +28,9 @@ export default function Home({
         <UpButton />
         <StarBorder id="about" className="w-full">
           <div className="text-start px-8 py-4">
-            <h1 className="font-sequel uppercase text-primary text-4xl">
+            <h2 className="font-sequel uppercase text-primary text-4xl">
               {t("title")}
-            </h1>
+            </h2>
             <div className="relative">
               <div className="w-full h-[2px] bg-[#c0f48c] my-8">
                 <ThunderShape

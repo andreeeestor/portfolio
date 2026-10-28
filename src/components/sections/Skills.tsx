@@ -11,9 +11,9 @@ export default function Skills(props: SkillsProps) {
   return (
     <StarBorder id={props.id} className="w-full">
       <div className="p-8 pb-0">
-        <h1 className="font-sequel text-center md:text-end uppercase text-primary text-4xl">
+        <h2 className="font-sequel text-center md:text-end uppercase text-primary text-4xl">
           {"skills //"}
-        </h1>
+        </h2>
         <div className="relative">
           <div className="w-full h-[2px] bg-[#c0f48c] my-8">
             <ThunderShape

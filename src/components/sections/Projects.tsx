@@ -114,7 +114,7 @@ export default function Projects(props: ProjectsProps) {
 
       <section className="relative">
         <div className="w-full bg-[#c0f48c] py-12 mb-16 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div aria-hidden="true" className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none select-none">
             <div className="absolute top-4 left-8 text-6xl font-bold">
               {"{ }"}
             </div>
@@ -125,7 +125,7 @@ export default function Projects(props: ProjectsProps) {
           </div>
 
           <div className="container mx-auto px-8">
-            <h1 className="font-sequel uppercase text-black text-5xl md:text-7xl lg:text-8xl relative z-10 tracking-tighter font-bold space-x-3">
+            <h2 className="font-sequel uppercase text-black text-5xl md:text-7xl lg:text-8xl relative z-10 tracking-tighter font-bold space-x-3">
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">
                 {"// "}
               </span>
@@ -153,7 +153,7 @@ export default function Projects(props: ProjectsProps) {
               <span className="inline-block transform hover:scale-105 transition-transform duration-300">
                 S
               </span>
-            </h1>
+            </h2>
 
             <div className="w-32 h-1 bg-black mt-4 mb-2 rounded-full"></div>
             <p className="text-black font-medium opacity-80 text-lg max-w-lg">
@@ -205,9 +205,9 @@ export default function Projects(props: ProjectsProps) {
                 <GithubLogo size={32} weight="duotone" />
               </div>
             </div>
-            <h1 className="text-center font-sequel text-3xl sm:text-4xl uppercase">
+            <h3 className="text-center font-sequel text-3xl sm:text-4xl uppercase">
               {t("repository")}
-            </h1>
+            </h3>
             <a
               href="https://github.com/andreeeestor?tab=repositories"
               target="_blank"

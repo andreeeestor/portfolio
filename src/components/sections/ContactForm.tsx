@@ -115,6 +115,7 @@ export default function Contact(props: ContactProps) {
 
   return (
     <StarBorder id={props.id} className="w-full mt-24" color="cyan" speed="5s">
+      <h2 className="sr-only">{title}</h2>
       <ScrollVelocity
         texts={marqueeTexts}
         velocity={60}
@@ -183,9 +184,9 @@ export default function Contact(props: ContactProps) {
         </button>
       </form>
 
-      <h6 className="text-indigo-300 font-semibold tracking-widest pb-4">
+      <p className="text-indigo-300 font-semibold tracking-widest pb-4">
         {t("or")}
-      </h6>
+      </p>
       <div className="flex sm:flex-row flex-col items-center justify-center gap-y-4 sm:gap-x-4 text-3xl sm:text-5xl text-indigo-300 pb-8">
         <PhoneCall />
         <span>{`//`}</span>
