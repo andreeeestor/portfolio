@@ -1,18 +1,15 @@
 "use client";
-import { CaretUp } from "@phosphor-icons/react";
+import { CaretUp } from "@phosphor-icons/react/dist/ssr";
 import { useEffect, useState } from "react";
 
 export default function UpButton() {
   const [backToTopButton, setBackToTopButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setBackToTopButton(true);
-      } else {
-        setBackToTopButton(false);
-      }
-    });
+    const onScroll = () => setBackToTopButton(window.scrollY > 100);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const scrollUp = () => {

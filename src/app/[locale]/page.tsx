@@ -9,8 +9,16 @@ import Skills from "@/components/sections/Skills";
 import StarBorder from "@/components/ui/StarBorder";
 import { useTranslations } from "next-intl";
 import CareerSection from "@/components/sections/CareerStepper";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Home() {
+export default function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("about");
 
   return (
@@ -39,10 +47,10 @@ export default function Home() {
                 src={"/images/eu.jpeg"}
                 alt="Minha Foto"
                 className="w-full h-[475px] bg-white rounded-3xl object-cover"
-                quality={100}
+                quality={80}
                 width={1000}
                 height={768}
-                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <p className="text-white text-lg leading-8">{t("description")}</p>
             </div>

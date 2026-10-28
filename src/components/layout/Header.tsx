@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import ResumeButton from "../ui/ResumeButton";
-import { CaretDown, Globe } from "@phosphor-icons/react";
+import { CaretDown, Globe } from "@phosphor-icons/react/dist/ssr";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -62,7 +62,116 @@ function useElementWidth(ref: React.RefObject<HTMLElement>): number {
   return width;
 }
 
-export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
+function wrap(min: number, max: number, v: number): number {
+  const range = max - min;
+  const mod = (((v - min) % range) + range) % range;
+  return mod + min;
+}
+
+/**
+ * Declared at module scope on purpose: when it was declared inside ScrollVelocity it
+ * became a brand new component type on every render, so React remounted the whole
+ * marquee (and restarted its animation loop) each time the parent re-rendered
+ * (e.g. on every keystroke in the contact form).
+ */
+function VelocityText({
+  children,
+  baseVelocity,
+  scrollContainerRef,
+  className = "",
+  damping,
+  stiffness,
+  numCopies,
+  velocityMapping,
+  parallaxClassName,
+  scrollerClassName,
+  parallaxStyle,
+  scrollerStyle,
+}: VelocityTextProps) {
+  const baseX = useMotionValue(0);
+  const scrollOptions = scrollContainerRef
+    ? { container: scrollContainerRef }
+    : {};
+  const { scrollY } = useScroll(scrollOptions);
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: damping ?? 50,
+    stiffness: stiffness ?? 400,
+  });
+  const velocityFactor = useTransform(
+    smoothVelocity,
+    velocityMapping?.input || [0, 1000],
+    velocityMapping?.output || [0, 5],
+    { clamp: false }
+  );
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const copyRef = useRef<HTMLSpanElement>(null);
+  const copyWidth = useElementWidth(copyRef);
+
+  // Don't burn a requestAnimationFrame loop while the marquee is off-screen.
+  const isVisible = useRef(true);
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible.current = entry.isIntersecting;
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const x = useTransform(baseX, (v) => {
+    if (copyWidth === 0) return "0px";
+    return `${wrap(-copyWidth, 0, v)}px`;
+  });
+
+  const directionFactor = useRef<number>(1);
+  useAnimationFrame((t, delta) => {
+    if (!isVisible.current) return;
+
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  const spans = [];
+  for (let i = 0; i < numCopies!; i++) {
+    spans.push(
+      <span
+        className={`flex-shrink-0 ${className}`}
+        key={i}
+        ref={i === 0 ? copyRef : null}
+      >
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      className={`${parallaxClassName} relative overflow-hidden`}
+      style={parallaxStyle}
+    >
+      <motion.div
+        className={`${scrollerClassName} flex whitespace-nowrap text-center font-sans text-4xl tracking-[-0.02em] drop-shadow md:text-[4rem] md:leading-[5rem]`}
+        style={{ x, ...scrollerStyle }}
+      >
+        {spans}
+      </motion.div>
+    </div>
+  );
+}
+
+const ScrollVelocityBase: React.FC<ScrollVelocityProps> = ({
   scrollContainerRef,
   texts = [],
   velocity = 100,
@@ -76,93 +185,6 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
   parallaxStyle,
   scrollerStyle,
 }) => {
-  function VelocityText({
-    children,
-    baseVelocity = velocity,
-    scrollContainerRef,
-    className = "",
-    damping,
-    stiffness,
-    numCopies,
-    velocityMapping,
-    parallaxClassName,
-    scrollerClassName,
-    parallaxStyle,
-    scrollerStyle,
-  }: VelocityTextProps) {
-    const baseX = useMotionValue(0);
-    const scrollOptions = scrollContainerRef
-      ? { container: scrollContainerRef }
-      : {};
-    const { scrollY } = useScroll(scrollOptions);
-    const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
-      damping: damping ?? 50,
-      stiffness: stiffness ?? 400,
-    });
-    const velocityFactor = useTransform(
-      smoothVelocity,
-      velocityMapping?.input || [0, 1000],
-      velocityMapping?.output || [0, 5],
-      { clamp: false }
-    );
-
-    const copyRef = useRef<HTMLSpanElement>(null);
-    const copyWidth = useElementWidth(copyRef);
-
-    function wrap(min: number, max: number, v: number): number {
-      const range = max - min;
-      const mod = (((v - min) % range) + range) % range;
-      return mod + min;
-    }
-
-    const x = useTransform(baseX, (v) => {
-      if (copyWidth === 0) return "0px";
-      return `${wrap(-copyWidth, 0, v)}px`;
-    });
-
-    const directionFactor = useRef<number>(1);
-    useAnimationFrame((t, delta) => {
-      let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-      if (velocityFactor.get() < 0) {
-        directionFactor.current = -1;
-      } else if (velocityFactor.get() > 0) {
-        directionFactor.current = 1;
-      }
-
-      moveBy += directionFactor.current * moveBy * velocityFactor.get();
-      baseX.set(baseX.get() + moveBy);
-    });
-
-    const spans = [];
-    for (let i = 0; i < numCopies!; i++) {
-      spans.push(
-        <span
-          className={`flex-shrink-0 ${className}`}
-          key={i}
-          ref={i === 0 ? copyRef : null}
-        >
-          {children}
-        </span>
-      );
-    }
-
-    return (
-      <div
-        className={`${parallaxClassName} relative overflow-hidden`}
-        style={parallaxStyle}
-      >
-        <motion.div
-          className={`${scrollerClassName} flex whitespace-nowrap text-center font-sans text-4xl tracking-[-0.02em] drop-shadow md:text-[4rem] md:leading-[5rem]`}
-          style={{ x, ...scrollerStyle }}
-        >
-          {spans}
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
     <section>
       {texts.map((text: string, index: number) => (
@@ -186,5 +208,8 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     </section>
   );
 };
+
+// Memoized so a parent that re-renders often (the contact form) doesn't re-render the marquee.
+export const ScrollVelocity = React.memo(ScrollVelocityBase);
 
 export default ScrollVelocity;

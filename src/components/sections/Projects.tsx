@@ -1,5 +1,4 @@
-"use client";
-import { ArrowUpRight, Code, GithubLogo } from "@phosphor-icons/react";
+import { ArrowUpRight, Code, GithubLogo } from "@phosphor-icons/react/dist/ssr";
 import ProjectsCards from "./ProjectsCards";
 import { useTranslations } from "next-intl";
 
@@ -13,7 +12,7 @@ export default function Projects(props: ProjectsProps) {
       id: "coverspot",
       title: "CoverSpot",
       cardDescription: `${t("CoverSpotSubtitle")}`,
-      imageUrl: "../../../images/image.png",
+      imageUrl: "/images/image.jpg",
       projectInfo: {
         title: "CoverSpot",
         description:
@@ -61,7 +60,7 @@ export default function Projects(props: ProjectsProps) {
       id: "voxgpt",
       title: "VoxGPT",
       cardDescription: `${t("VoxGPTSubtitle")}`,
-      imageUrl: "../../../images/voxgpt.jpg",
+      imageUrl: "/images/voxgpt.jpg",
       projectInfo: {
         title: "VoxGPT",
         description:
@@ -85,7 +84,7 @@ export default function Projects(props: ProjectsProps) {
       id: "nearbyapp",
       title: "NearbyApp",
       cardDescription: `${t("NearbySubtitle")}`,
-      imageUrl: "../../../images/business-people-using-maps-phones.jpg",
+      imageUrl: "/images/business-people-using-maps-phones.jpg",
       projectInfo: {
         title: "NearbyApp",
         description:
@@ -98,7 +97,7 @@ export default function Projects(props: ProjectsProps) {
       id: "estoque",
       title: "Estoque",
       cardDescription: `${t("EstoqueSubtitle")}`,
-      imageUrl: "../../../images/estoque.jpg",
+      imageUrl: "/images/estoque.jpg",
       projectInfo: {
         title: "Estoque",
         description:

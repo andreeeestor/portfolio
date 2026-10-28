@@ -1,7 +1,5 @@
-"use client";
 import React, { FC } from "react";
-import { motion } from "framer-motion";
-import { ArrowCircleRight } from "@phosphor-icons/react";
+import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 
 export const RevealLinks: FC = () => {
   return (
@@ -31,65 +29,58 @@ export const RevealLinks: FC = () => {
   );
 };
 
-const DURATION = 0.25;
-const STAGGER = 0.025;
+const DURATION_MS = 250;
+const STAGGER_MS = 25;
 
 interface FlipLinkProps {
   children: string;
   href: string;
 }
 
+/**
+ * Pure-CSS version of the letter flip (no JS / framer-motion needed):
+ * every letter slides up and is replaced by a copy coming from below,
+ * staggered per character.
+ */
 const FlipLink: FC<FlipLinkProps> = ({ children, href }) => {
+  const chars = children.split("");
+  const letterStyle = (i: number): React.CSSProperties => ({
+    transitionDuration: `${DURATION_MS}ms`,
+    transitionDelay: `${STAGGER_MS * i}ms`,
+  });
+
   return (
-    <motion.a
-      initial="initial"
-      whileHover="hovered"
+    <a
       href={href}
       target={href.startsWith("mailto:") ? undefined : "_blank"}
       rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-      className="relative block overflow-hidden whitespace-nowrap text-6xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+      className="group/flip relative block overflow-hidden whitespace-nowrap text-6xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
       style={{
         lineHeight: 0.75,
       }}
     >
       <div>
-        {children.split("").map((char, i) => (
-          <motion.span
-            variants={{
-              initial: { y: 0 },
-              hovered: { y: "-100%" },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
+        {chars.map((char, i) => (
+          <span
+            className="inline-block transition-transform ease-in-out group-hover/flip:-translate-y-full"
+            style={letterStyle(i)}
             key={i}
           >
             {char}
-          </motion.span>
+          </span>
         ))}
       </div>
-      <div className="absolute inset-0">
-        {children.split("").map((char, i) => (
-          <motion.span
-            variants={{
-              initial: { y: "100%" },
-              hovered: { y: 0 },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
+      <div className="absolute inset-0" aria-hidden="true">
+        {chars.map((char, i) => (
+          <span
+            className="inline-block translate-y-full transition-transform ease-in-out group-hover/flip:translate-y-0"
+            style={letterStyle(i)}
             key={i}
           >
             {char}
-          </motion.span>
+          </span>
         ))}
       </div>
-    </motion.a>
+    </a>
   );
 };

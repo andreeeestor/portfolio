@@ -16,6 +16,8 @@
   },
   "career": {
     "title": "Experiência Profissional",
+    "tabPrefix": "EXPERIÊNCIA",
+    "techLabel": "TECNOLOGIAS UTILIZADAS",
     "journeyText": "Jornada em Evolução",
     "journeySubtext": "Desenvolvendo o futuro da tecnologia ✨",
     "positions": {

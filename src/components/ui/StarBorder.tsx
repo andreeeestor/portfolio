@@ -24,7 +24,7 @@ const StarBorder = <T extends React.ElementType>({
   return (
     <Component
       id={id}
-      className={`relative inline-block py-[1px] overflow-hidden rounded-[20px] ${className}`}
+      className={`relative inline-block py-[1px] overflow-x-clip rounded-[20px] ${className}`}
       {...rest}
     >
       <div

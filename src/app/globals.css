@@ -23,3 +23,15 @@
 .modalIcon {
   @apply text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24
 }
+
+/* BubbleText: hovered letter gets heavy, its direct neighbours get medium. */
+.hover-text span:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+.hover-text span:hover + span,
+.hover-text span:has(+ span:hover) {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}

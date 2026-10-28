@@ -1,5 +1,5 @@
 "use client";
-import { ArrowUpRight, DownloadSimple } from "@phosphor-icons/react";
+import { DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations, useLocale } from "next-intl";
 
 export default function ResumeButton() {

@@ -1,8 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
-import { ArrowDownLeft, ArrowUpRight } from "@phosphor-icons/react";
-import SpringModal from "../ui/Modal";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import { ArrowDownLeft, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { useState } from "react";
+
+// The modal (and framer-motion's exit animation) is only needed once a card is opened.
+const loadModal = () => import("../ui/Modal");
+const SpringModal = dynamic(loadModal, { ssr: false });
 
 interface ProjectInfo {
   title: string;
@@ -31,33 +35,30 @@ export default function ProjectsCards({
   status,
 }: ProjectsCardsProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
+
+  const openModal = () => {
+    setHasOpened(true);
+    setIsOpen(true);
+  };
+
   return (
     <>
-      <motion.article
-        className="w-full sm:w-[335px] md:w-96 h-[22rem] sm:h-[28rem] rounded-2xl relative overflow-visible shadow-lg"
-        whileHover={{
-          scale: 1.02,
-          boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center rounded-2xl"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.5 }}
-        />
+      <article className="group/card w-full sm:w-[335px] md:w-96 h-[22rem] sm:h-[28rem] rounded-2xl relative overflow-visible shadow-lg transition-[transform,box-shadow] duration-300 hover:scale-[1.02] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
+        <div className="absolute inset-0 rounded-2xl transition-transform duration-500 group-hover/card:scale-110">
+          <Image
+            src={imageUrl}
+            alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, 384px"
+            quality={75}
+            className="rounded-2xl object-cover object-center"
+          />
+        </div>
 
-        <motion.div
-          className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl"
-          whileHover={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-          transition={{ duration: 0.5 }}
-        />
+        <div className="absolute inset-0 bg-black/50 rounded-2xl transition-colors duration-500 group-hover/card:bg-black/30" />
 
-        <motion.div
-          className="relative z-10 flex flex-col items-center justify-center text-white p-6 text-center h-full"
-          whileHover={{ y: -10 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="relative z-10 flex flex-col items-center justify-center text-white p-6 text-center h-full transition-transform duration-500 group-hover/card:-translate-y-2.5">
           <h3 className="text-xl sm:text-2xl font-bold mb-2">{title}</h3>
           <p className="text-xs sm:text-sm">{description}</p>
 
@@ -67,9 +68,10 @@ export default function ProjectsCards({
               EM DESENVOLVIMENTO
             </div>
           )}
-        </motion.div>
+        </div>
         <div
-          onClick={() => setIsOpen(true)}
+          onClick={openModal}
+          onPointerEnter={() => void loadModal()}
           className="z-10 absolute right-3 bottom-3 rounded-full bg-transparent border-2 border-white transition-all hover:bg-white p-3 group cursor-pointer"
         >
           <ArrowUpRight
@@ -83,12 +85,14 @@ export default function ProjectsCards({
             <ArrowDownLeft size={48} color="#FFF" />
           </div>
         )}
-      </motion.article>
-      <SpringModal
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        projectInfo={projectInfo}
-      />
+      </article>
+      {hasOpened && (
+        <SpringModal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          projectInfo={projectInfo}
+        />
+      )}
     </>
   );
 }

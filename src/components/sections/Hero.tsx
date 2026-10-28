@@ -1,7 +1,5 @@
-"use client";
-import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { HandWaving } from "@phosphor-icons/react";
+import { HandWaving } from "@phosphor-icons/react/dist/ssr";
 
 function FloatingShape({
   style,
@@ -62,8 +60,6 @@ function Asterisk({ style }: { style?: React.CSSProperties }) {
 
 export default function Hero() {
   const t = useTranslations("hero");
-
-  useEffect(() => {}, []);
 
   return (
     <>

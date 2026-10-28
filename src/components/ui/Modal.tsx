@@ -1,4 +1,4 @@
-import { Code, GithubLogo, Globe } from "@phosphor-icons/react";
+import { Code, GithubLogo, Globe } from "@phosphor-icons/react/dist/ssr";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 import { useTranslations } from "next-intl";

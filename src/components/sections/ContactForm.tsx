@@ -6,26 +6,25 @@ import StarBorder from "../ui/StarBorder";
 import { useForm } from "@formspree/react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 interface ContactProps {
   id: string;
 }
 
 export default function Contact(props: ContactProps) {
   const t = useTranslations("contact");
+  const title = t("title");
+  // Stable reference so the (memoized) marquee doesn't re-render on every keystroke.
+  const marqueeTexts = useMemo(() => [title, title], [title]);
   const [state, handleSubmit] = useForm("xvgapzwl");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formLoadTime, setFormLoadTime] = useState(Date.now());
+  const [formLoadTime] = useState(() => Date.now());
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
     honeypot: "",
   });
-
-  useEffect(() => {
-    setFormLoadTime(Date.now());
-  }, []);
 
   useEffect(() => {
     if (state.succeeded) {
@@ -117,7 +116,7 @@ export default function Contact(props: ContactProps) {
   return (
     <StarBorder id={props.id} className="w-full mt-24" color="cyan" speed="5s">
       <ScrollVelocity
-        texts={[`${t("title")}`, `${t("title")}`]}
+        texts={marqueeTexts}
         velocity={60}
         className="font-sequel uppercase text-gray-200 pt-4"
       />

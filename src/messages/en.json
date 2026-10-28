@@ -16,6 +16,8 @@
   },
   "career": {
     "title": "Professional Experience",
+    "tabPrefix": "EXPERIENCE",
+    "techLabel": "TECHNOLOGIES USED",
     "journeyText": "Journey in Evolution",
     "journeySubtext": "Building the future of technology ✨",
     "positions": {
